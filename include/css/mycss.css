@@ -1,0 +1,167 @@
+.overflow {
+	margin: 0px;
+	padding: 0px;
+	padding-right: 17px;
+	overflow: hidden;
+	max-height: 700px;
+}
+
+.overflow:HOVER {
+	background-color:#EEEEEE;
+	margin: 0px;
+	padding: 0px;
+	overflow: auto;
+	max-height: 700px;
+}
+
+#imageEvent {
+    float: left;
+    text-align: center;
+}
+
+#imageEvent li {
+    float: left;
+    
+    height: 100px;
+    margin-right: 20px;
+    list-style: none;
+    border: 3px solid #eee;
+    overflow: hidden;
+    position: relative;
+}
+
+#imageEvent li img {
+    
+    height: 100px;
+    display: block;
+    position: relative;
+}
+
+#imageEvent li span {
+    display: none;
+    font-size: 10pt;
+    font-weight: bold;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    color: #fff;
+    text-shadow: #000 0px 0px 20px;
+    background-color: rgba(15, 15, 15, 0.6);
+	left:0;
+}
+
+#popup {
+    display: none;
+    float: left;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 20%;
+}
+
+
+#popup img {
+    height: 300px;
+}
+
+#dark-background {
+	margin-top:-80px !important;
+    margin-bottom: 0px;
+    display: none;
+    height: 170%;
+    position: absolute;
+    background-color: rgba(15, 15, 15, 0.6);
+    width: 100%;
+    z-index: 50;
+}
+
+.container .hero-unit{
+	padding: 0px;	
+}
+.hero-unit .row .span6{
+	margin-left: 50px;
+	margin-top: 35px;
+	text-align: center;
+}
+.container .row .span4 h2{
+	text-align: center;
+}
+.container .row .span4 p{
+	text-align: center;
+}
+.container .row .span4 .actualite{
+	margin-top: 20px;
+}
+.container .row .span4 .bs-docs-example{
+	margin-top: 20px;
+}
+.mybutton .btn{
+	padding: 0px !important;
+}
+.mybutton a{
+	display: block; 
+	margin: 0px; 
+	padding: 8px;
+}
+
+.container-fluid .row-fluid{
+	vertical-align: middle;
+}
+.container-fluid .row-fluid .span2{
+	height: 220px; 
+	width: 130px !important;
+}
+.container-fluid .row-fluid .span15 .hero-unit{
+	padding: 0px;
+}
+.container-fluid .row-fluid .span15 .hero-unit .row{
+	text-align: center;
+}
+.container-fluid .row-fluid .span15 .hero-unit .row h3{
+	color: red;
+}
+.agenda{
+	text-align: center;
+}
+.nav-collapse .nav .dropdown .dropdown-menu img{
+	height: 20px;
+}
+.actualitePage{
+    text-align: justify;
+}
+.wiki{
+    text-align: center;
+}
+.span2 .wikiLink{
+    text-align: center;
+    margin-left:35%;
+}
+.titreActu{
+    margin-top: 5px;
+}
+.container-fluid .well{
+    position:relative;
+    left: 50%;
+    width: 1000px;
+    margin-left: -500px; /* Cette valeur doit être la moitié négative de la valeur du width */
+}
+.container-fluid .well2{
+    position:relative;
+    left: 50%;
+    width: 600px;
+    margin-left: -300px; /* Cette valeur doit être la moitié négative de la valeur du width */
+}
+.nav-collapse .link input[type="submit"]{
+    border: 0;
+    background: none; /* ou transparent je sais plus... */
+    padding: 3px 0px;
+    clear: both;
+    font-weight: normal;
+    line-height: 18px;
+    color: #333333;
+    white-space: nowrap;
+    width: 100%;
+    text-align: left;
+}

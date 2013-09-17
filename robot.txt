@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow: /include/connect.bdd.php
+Disallow: /include/login.php
+Disallow: /include/logout.php
+Disallow: /include/pass.encrypt.php
