@@ -1,9 +1,4 @@
 <?php
-//admin user
-$admin 		= 	array					(
-		'id'	=>	'admin'				,
-		'pass'=>	'AdminLm/2013');
-
 //bdd config
 $bddConfig 	= 	array				(
 		'host'	=>	'localhost'	,
