@@ -29,8 +29,31 @@ class User {
 	
 	/*geters*/
 	public function id(){
-		
+		return $this->_id;
 	}
+	public function name(){
+		return $this->_name;
+	}
+	public function pass(){
+		return $this->_pass;
+	}
+	public function mail(){
+		return $this->_mail;
+	}
+	
 	/*seters*/
+	public function setId($id){
+		$id = (int) $id;
+		if ($id > 0){
+			$this->_id = $id;
+		}
+	}
+	
+	public function setName($name){
+		if (is_string($name) && strlen($name)<254 && !empty($name)){
+			$this->_name=$name;
+		}
+	}
+	
 	
 }
