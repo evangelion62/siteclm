@@ -2,7 +2,7 @@
 
 switch ($action) {
 	case 'Accueil':
-
+		
 	break;
 	
 	default:

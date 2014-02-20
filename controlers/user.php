@@ -2,7 +2,7 @@
 
 switch ($action){
 	case 'login':
-		$user = new User();
+		
 	break;
 	
 	case 'logout':

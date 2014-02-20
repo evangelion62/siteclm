@@ -2,9 +2,10 @@
 //autoload
 function chargerClasse($classe)
 {
-	require $classe . '.class.php'; // On inclut la classe correspondante au paramètre passé.
+	require_once 'model/'.$classe . '.class.php'; // On inclut la classe correspondante au paramètre passé.
 }
 
+spl_autoload_register('chargerClasse');
 
 //bdd config
 $bddConfig 	= 	array				(
