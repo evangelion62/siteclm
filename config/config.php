@@ -1,4 +1,11 @@
 <?php
+//autoload
+function chargerClasse($classe)
+{
+	require $classe . '.class.php'; // On inclut la classe correspondante au paramètre passé.
+}
+
+
 //bdd config
 $bddConfig 	= 	array				(
 		'host'	=>	'localhost'	,

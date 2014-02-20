@@ -2,7 +2,7 @@
 
 switch ($action) {
 	case 'Accueil':
-		echo 'test';
+
 	break;
 	
 	default:
