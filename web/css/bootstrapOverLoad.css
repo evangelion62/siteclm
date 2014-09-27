@@ -1,0 +1,9 @@
+.nav li a{
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+.navbar-right{
+	position: relative;
+	right: 15px;
+}

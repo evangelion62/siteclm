@@ -12,7 +12,9 @@
 		<title><?php echo (empty($templateTitle)) ? 'collége Louise Michel' : htmlspecialchars($templateTitle); ?></title>
 		
 		<!-- Bootstrap -->
-    	<link href="../web/css/bootstrap.min.css" rel="stylesheet">
+    	<link href="web/css/bootstrap.min.css" rel="stylesheet">
+    	<!-- Bootstrap surcharge -->
+    	<link href="web/css/bootstrapOverLoad.css" rel="stylesheet">
     	
     	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -22,11 +24,11 @@
 	    <![endif]-->
 	</head>
 	<body>
-		<?php if (is_file('navbar.php')){require_once 'navbar.php';}?>
+		<?php if (is_file('template/navbar.php')){require_once 'navbar.php';}?>
 
 	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	    <!-- Include all compiled plugins (below), or include individual files as needed -->
-	    <script src="../web/js/bootstrap.min.js"></script>
+	    <script src="web/js/bootstrap.min.js"></script>
 	</body>
 </html>
