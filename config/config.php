@@ -12,7 +12,7 @@ $bddConfig 	= 	array				(
 		'host'	=>	'localhost'	,
 		'dbname'=>	'siteclm'		,
 		'user'	=>	'root'			,
-		'pwd'		=>	''					);
+		'pwd'	=>	''				);
 
 //connexion à la bdd
 try

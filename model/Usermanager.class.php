@@ -1,5 +1,5 @@
 <?php
-class Usermanager {
+class UserManager {
 	private $db;
 	
 	/*constructeur*/
