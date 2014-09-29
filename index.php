@@ -4,5 +4,5 @@
 	if (is_file($controler)){
 		require_once $controler;
 	}else{
-		require_once ('controlers/index');
+		require_once ('controlers/index.php');
 	}
