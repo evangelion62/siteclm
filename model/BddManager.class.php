@@ -22,6 +22,9 @@ class BddManager {
 			$this->xmlstr = $xmlstr;
 		}
 	}
+	private function setHost($host){
+		
+	}
 	/*getters*/
 	
 }
