@@ -40,8 +40,12 @@
 				</li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li ><a href="#"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
-				<li ><a href="#"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Connexion<span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="#">Actualité</a></li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 	</div>

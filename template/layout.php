@@ -24,8 +24,11 @@
 	    <![endif]-->
 	</head>
 	<body>
-		<?php if (is_file('template/navbar.php')){require_once 'navbar.php';}?>
-
+		<!-- navbar======================================================== -->
+		<?php if (is_file('template/navbar.php')){require_once 'template/navbar.php';}?>
+		
+		<!-- footer======================================================== -->
+		<?php if (is_file('template/footer.php')){require_once 'template/footer.php';}?>
 	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	    <!-- Include all compiled plugins (below), or include individual files as needed -->
