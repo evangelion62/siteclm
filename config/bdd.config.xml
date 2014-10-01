@@ -1,7 +1,7 @@
-<?xml version='1.0' standalone='yes'?>
+<?xml version="1.0" standalone="yes"?>
 <bdd>
-		<host></host>
-		<dbname></dbname>
-		<user></user>
-		<pwd></pwd>
+		<host>testhost</host>
+		<dbname>testdbname</dbname>
+		<user>testuser</user>
+		<pwd>pwd</pwd>
 </bdd>

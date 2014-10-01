@@ -27,6 +27,10 @@
 		<!-- navbar======================================================== -->
 		<?php if (is_file('template/navbar.php')){require_once 'template/navbar.php';}?>
 		
+		<div class='container'>
+		<?php if (!empty($contents)) {echo $contents;}?>
+		</div>
+		
 		<!-- footer======================================================== -->
 		<?php if (is_file('template/footer.php')){require_once 'template/footer.php';}?>
 	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
