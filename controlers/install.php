@@ -7,14 +7,6 @@ switch ($action) {
 		require_once 'template/bddconfig.php';
 	break;
 	
-	case value:
-		;
-	break;
-	
-	case value:
-		;
-	break;
-		
 	default:
 		;
 	break;

@@ -7,25 +7,8 @@ function chargerClasse($classe)
 
 spl_autoload_register('chargerClasse');
 
-//bdd config
-$bddConfig 	= 	array				(
-		'host'	=>	'localhost'	,
-		'dbname'=>	'siteclm'		,
-		'user'	=>	'root'			,
-		'pwd'	=>	''				);
-
-//connexion à la bdd
-try
-{
-	$bdd = new PDO('mysql:host='.$bddConfig['host'].';dbname='.$bddConfig['dbname'], $bddConfig['user'], $bddConfig['pwd']);
-}
-catch (Exception $e)
-{
-	die('Erreur : ' . $e->getMessage());
-}
-
-//supression des données de connexion
-$bddConfig = array();
+//conection à la base de donnée
+require_once 'config/bdd.connect.php';
 
 //définition des varriable controler et action
 if (!empty($_GET['controler'])) {

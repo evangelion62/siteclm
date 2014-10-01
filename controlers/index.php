@@ -6,6 +6,6 @@ switch ($action) {
 	break;
 	
 	default:
-		echo 'defaut';
+		require_once 'template/index.php';
 	break;
 }
