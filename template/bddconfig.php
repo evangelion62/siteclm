@@ -1,4 +1,8 @@
-<?php ob_start();?>
+<?php
+/*template de configuration de la  bdd
+ * varriable attendu $formAction avec la cible du formulaire
+ * varriable annex $userErrors['bdderror'] et $bddLastConfig[]*/
+ob_start();?>
 	<h1>Procédure d'installation du site</h1>
 	<p>étape 1 - configuration de la base de données<br>
 	<?php if (!empty($userErrors['bdderror']))
@@ -7,29 +11,29 @@
 			}
 	?>
 	</p>
-	<form class="form-horizontal" role="form" action="?controler=install&action=bddFirstConfig" method="post">
+	<form class="form-horizontal" role="form" action="<?php if (!empty($formAction)){echo $formAction;}?>" method="POST">
 	  <div class="form-group">
 	    <label for="host" class="col-sm-2 control-label">Serveur</label>
 	    <div class="col-sm-10">
-	      <input type="text" class="form-control" id="host" placeholder="Serveur">
+	      <input type="text" class="form-control" name="host" id="host" placeholder="Serveur" <?php if (isset($bddLastConfig['host'])){echo 'value="'.$bddLastConfig['host'].'"';}?>>
 	    </div>
 	  </div>
 	  <div class="form-group">
 	    <label for="dbname" class="col-sm-2 control-label">Base de données</label>
 	    <div class="col-sm-10">
-	      <input type="text" class="form-control" id="dbname" placeholder="Base de données">
+	      <input type="text" class="form-control" name="dbname" id="dbname" placeholder="Base de données" <?php if (isset($bddLastConfig['dbname'])){echo 'value="'.$bddLastConfig['dbname'].'"';}?>>
 	    </div>
 	  </div>
 	  <div class="form-group">
 	    <label for="user" class="col-sm-2 control-label">Utilisateur</label>
 	    <div class="col-sm-10">
-	      <input type="text" class="form-control" id="user" placeholder="Utilisateur">
+	      <input type="text" class="form-control" name="user" id="user" placeholder="Utilisateur" <?php if (isset($bddLastConfig['user'])){echo 'value="'.$bddLastConfig['user'].'"';}?>>
 	    </div>
 	  </div>
 	  <div class="form-group">
 	    <label for="pwd" class="col-sm-2 control-label">Mot de passe</label>
 	    <div class="col-sm-10">
-	      <input type="password" class="form-control" id="pwd" placeholder="Mot de passe">
+	      <input type="password" class="form-control" name="pwd" id="pwd" placeholder="Mot de passe">
 	    </div>
 	  </div>
 	  <div class="form-group">

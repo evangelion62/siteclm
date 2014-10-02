@@ -9,8 +9,9 @@ try
 }
 catch (Exception $e)
 {
-	$_GET['controler']='install';
+	$_GET['controler']='error';
 	$_GET['action']='bddBadConfig';
+	$userErrors['bdderror']='mauvaise configuration de la base de données. veuillé verifié !';
 }
 
 //supression des données de connexion

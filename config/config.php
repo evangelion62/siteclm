@@ -7,6 +7,9 @@ function chargerClasse($classe)
 
 spl_autoload_register('chargerClasse');
 
+//initialisation du tableau d'erreur utilisateur
+$userErrors=array();
+
 //conection à la base de donnée
 require_once 'config/bdd.connect.php';
 
@@ -27,5 +30,5 @@ if (!empty($_GET['action'])){
 	$action='index';
 }
 
-//initialisation du tableau d'erreur utilisateur
-$userErrors=array();
+//demarage du module de session
+session_start();
