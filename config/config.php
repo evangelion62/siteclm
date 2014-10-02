@@ -26,3 +26,6 @@ if (!empty($_GET['action'])){
 }else{
 	$action='index';
 }
+
+//initialisation du tableau d'erreur utilisateur
+$userErrors=array();

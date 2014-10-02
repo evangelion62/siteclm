@@ -1,6 +1,12 @@
 <?php ob_start();?>
 	<h1>Procédure d'installation du site</h1>
-	<p>étape 1 - configuration de la base de données</p>
+	<p>étape 1 - configuration de la base de données<br>
+	<?php if (!empty($userErrors['bdderror']))
+			{
+				echo '<span class="label label-danger">'.$userErrors['bdderror'].'</span>';
+			}
+	?>
+	</p>
 	<form class="form-horizontal" role="form" action="?controler=install&action=bddFirstConfig" method="post">
 	  <div class="form-group">
 	    <label for="host" class="col-sm-2 control-label">Serveur</label>

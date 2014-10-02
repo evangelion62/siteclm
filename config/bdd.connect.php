@@ -9,7 +9,8 @@ try
 }
 catch (Exception $e)
 {
-	die('Erreur : ' . $e->getMessage());
+	$_GET['controler']='install';
+	$_GET['action']='bddBadConfig';
 }
 
 //supression des données de connexion
