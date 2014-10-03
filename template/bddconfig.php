@@ -1,10 +1,11 @@
 <?php
 /*template de configuration de la  bdd
  * varriable attendu $formAction avec la cible du formulaire
- * varriable annex $userErrors['bdderror'] et $bddLastConfig[]*/
+ * varriable annex $userErrors['bdderror'] et $bddLastConfig[]
+ * Accessible à ?controler=install&action=bddFirstConfig*/
 ob_start();?>
 	<h1>Procédure d'installation du site</h1>
-	<p>étape 1 - configuration de la base de données<br>
+	<p>Etape 1 - configuration de la base de données<br>
 	<?php if (!empty($userErrors['bdderror']))
 			{
 				echo '<span class="label label-danger">'.$userErrors['bdderror'].'</span>';
