@@ -8,7 +8,7 @@ ob_start();?>
 	<p>Etape 1 - Configuration de la base de données<br>
 	<?php if (!empty($userErrors['bdderror']))
 			{
-				echo '<span class="label label-danger">'.$userErrors['bdderror'].'</span>';
+				echo '<span class="label label-danger">Erreur</span> '.$userErrors['bdderror'].'';
 			}
 	?>
 	</p>
