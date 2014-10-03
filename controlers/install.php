@@ -17,6 +17,7 @@ switch ($action) {
 			header('Location: ?controler=install&action=siteNameConfig');
 		}
 		else {
+			$templateTitle='Site Install';
 			$formAction='?controler=install&action=bddFirstConfig';
 			require_once 'template/bddconfig.php';
 		}
