@@ -1,9 +1,10 @@
 <?php
-$bddManager = new BddManager('config/bdd.config.xml');
 
 switch ($action) {
 	/*parametrage du fichier xml si jamais paramétré*/
 	case 'bddFirstConfig':
+		$bddManager = new BddManager('config/bdd.config.xml');
+		
 		if (	!empty	($_POST['host'])
 			&& 	!empty	($_POST['dbname'])
 			&&	!empty	($_POST['user'])
@@ -25,7 +26,13 @@ switch ($action) {
 	
 	/*paramétrage du nom du site et de l'adresse DNS*/
 	case 'siteNameConfig':
-		require_once 'template/siteconfig.php';
+		$siteManager = new SiteManager('config/site.config.xml');
+		
+		$siteManager->setName('test2');
+		$siteManager->url('testurl2');
+		$siteManager->adminId('testadminid2');
+		$siteManager->adminpwd('testadminpwd');
+		echo($siteManager->name().','.$siteManager->url().','.$siteManager->adminId().','.$siteManager->adminpwd());
 	break;
 	
 	default:

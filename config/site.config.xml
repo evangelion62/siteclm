@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-    <name></name>
-    <adminId></adminId>
-    <adminpwd></adminpwd>
+    <name>test2</name>
+    <url>urltest</url>
+    <adminId>adminidtest</adminId>
+    <adminpwd>adminpwdtest</adminpwd>
 </site>
