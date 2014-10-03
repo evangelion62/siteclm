@@ -9,7 +9,7 @@
     	<link rel="icon" href="../../favicon.ico">
     	
 		<!-- titre de la page -->
-		<title><?php echo (empty($templateTitle)) ? 'collége Louise Michel' : htmlspecialchars($templateTitle); ?></title>
+		<title><?php echo (empty($templateTitle)) ? 'Collège Louise Michel' : htmlspecialchars($templateTitle); ?></title>
 		
 		<!-- Bootstrap -->
     	<link href="web/css/bootstrap.min.css" rel="stylesheet">

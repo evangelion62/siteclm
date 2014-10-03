@@ -11,7 +11,7 @@ catch (Exception $e)
 {
 	$_GET['controler']='error';
 	$_GET['action']='bddBadConfig';
-	$userErrors['bdderror']='mauvaise configuration de la base de données. veuillé verifié !';
+	$userErrors['bdderror']='Mauvaise configuration de la base de données. Veuillez vérifier vos informations!';
 }
 
 //supression des données de connexion
