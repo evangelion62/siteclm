@@ -35,6 +35,9 @@ switch ($action) {
 		echo($siteManager->name().','.$siteManager->url().','.$siteManager->adminId().','.$siteManager->adminpwd());
 	break;
 	
+	case 'siteAdminConfig':
+		require_once 'template/siteadminconfig.php';
+	break;
 	default:
 		header('Location: ?controler=install&action=bddFirstConfig');
 	break;
