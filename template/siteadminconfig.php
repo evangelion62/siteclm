@@ -8,9 +8,7 @@ ob_start();?>
 	<h1>Procédure d'installation du site</h1>
 	<p>Etape 3 - Identité de votre administrateur<br>
 <form class="form-horizontal" role="form" action="<?php if (!empty($formAction)){echo $formAction;}?>" method="POST">
-	  <span class="label label-warning">Warning</span>
-	  <p>
-	  	Important : L'administrateur possède l'accès à l'ensemble du site et à toutes les informations sensibles. Notez soigneusement l'identifiant et le mot de passe et conservez-les à l'abri des regards indiscrets. 
+	  <p><span class="label label-warning">Important</span> L'administrateur possède l'accès à l'ensemble du site et à toutes les informations sensibles. Notez soigneusement l'identifiant et le mot de passe et conservez-les à l'abri des regards indiscrets. 
 	  </p>
 	  <div class="form-group">
 	    <label for="adminId" class="col-sm-2 control-label">Identifiant Administrateur</label>
