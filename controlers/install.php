@@ -25,8 +25,7 @@ switch ($action) {
 	
 	/*paramétrage du nom du site et de l'adresse DNS*/
 	case 'siteNameConfig':
-		echo("test de siteNameConfig");
-		
+		require_once 'template/siteconfig.php';
 	break;
 	
 	default:
