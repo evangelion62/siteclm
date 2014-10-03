@@ -5,7 +5,7 @@
  * Accessible à ?controler=install&action=bddFirstConfig*/
 ob_start();?>
 	<h1>Procédure d'installation du site</h1>
-	<p>Etape 1 - configuration de la base de données<br>
+	<p>Etape 1 - Configuration de la base de données<br>
 	<?php if (!empty($userErrors['bdderror']))
 			{
 				echo '<span class="label label-danger">'.$userErrors['bdderror'].'</span>';
@@ -39,7 +39,7 @@ ob_start();?>
 	  </div>
 	  <div class="form-group">
 	    <div class="col-sm-offset-2 col-sm-10">
-	      <button type="submit" class="btn btn-default">Envoyer</button>
+	      <button type="submit" class="btn btn-default">Valider</button>
 	    </div>
 	  </div>
 	</form>

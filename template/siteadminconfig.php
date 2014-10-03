@@ -2,22 +2,25 @@
 /*template de configuration de la  bdd
  * varriable attendu $formAction avec la cible du formulaire
 * varriable annex $userErrors['bdderror'] et $bddLastConfig[]
-* Accessible à ?controler=install&action=siteNameConfig*/
+* Accessible à ?controler=install&action=siteadminconfig*/
 ob_start();?>
 
 	<h1>Procédure d'installation du site</h1>
-	<p>Etape 2 - Identité de votre site<br>
+	<p>Etape 3 - Identité de votre administrateur<br>
 <form class="form-horizontal" role="form" action="<?php if (!empty($formAction)){echo $formAction;}?>" method="POST">
+	  <p>
+	  	Important : L'administrateur possède l'accès à l'ensemble du site et à toutes les informations sensibles. Notez soigneusement l'identifiant et le mot de passe et conservez-les à l'abri des regards indiscrets. 
+	  </p>
 	  <div class="form-group">
-	    <label for="sitename" class="col-sm-2 control-label">Nom du site</label>
+	    <label for="adminId" class="col-sm-2 control-label">Identifiant Administrateur</label>
 	    <div class="col-sm-10">
-	      <input type="text" class="form-control" name="sitename" id="sitename" placeholder="Nom du site" >
+	      <input type="text" class="form-control" name="adminId" id="adminId" placeholder="Votre identifiant admisnistrateur..." >
 	    </div>
 	  </div>
 	  <div class="form-group">
-	    <label for="urlsite" class="col-sm-2 control-label">Adresse / Url du site</label>
+	    <label for="adminMdp" class="col-sm-2 control-label">Mot de passe</label>
 	    <div class="col-sm-10">
-	      <input type="text" class="form-control" name="urlsite" id="urlsite" placeholder="Adresse du site">
+	      <input type="text" class="form-control" name="adminMdp" id="adminMdp" placeholder="Votre mot de passe...">
 	    </div>
 	  </div>
 	  <div class="form-group">
@@ -26,7 +29,6 @@ ob_start();?>
 	    </div>
 	  </div>
 	</form>
-
 <?php
 $contents = ob_get_clean();
 if (is_file('template/layout.php')){
