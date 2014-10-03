@@ -31,7 +31,6 @@
         		<h4>Informations légales</h4>
         		<ol class="list-unstyled">
         			<li>Droit à l'image</li>
-					<li>RI</li>
         		</ol>
 			</div>
 			<div class="col-md-2">
