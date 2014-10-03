@@ -1,9 +1,19 @@
+/********************nav***********************/
 .nav li a{
 	padding-right: 5px;
 	padding-left: 5px;
 }
 
+/********************footer*******************/
 .footer .row h4{
 	height: 35px;
 	color: #5bc0de;
+}
+
+.footer a{
+	color: #2e2e2e
+}
+
+.footer a:VISITED{
+	color: #8c8c8c;
 }
