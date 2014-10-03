@@ -6,6 +6,7 @@ class SiteManager {
 	private $url;
 	private $adminId;
 	private $adminpwd;
+	private $installStatus;
 
 	/*constructeur*/
 	public function __construct($xmlConfigFile){
@@ -51,6 +52,13 @@ class SiteManager {
 			$this->editXmlConfigFile();
 		}
 	}
+	public function setInstallStatus($installStatus){
+		if (is_string($installStatus)&&(strlen($installStatus)<255)){
+			$this->xmlElement->installStatus[0] = $installStatus;
+			$this->editXmlConfigFile();
+		}
+	}
+	
 	/*getters*/
 	public function name() {
 		return $this->xmlElement->name[0];
@@ -63,5 +71,8 @@ class SiteManager {
 	}
 	public function adminpwd() {
 		return $this->xmlElement->adminpwd[0];
+	}
+	public function installStatus() {
+		return $this->xmlElement->installStatus[0];
 	}
 }

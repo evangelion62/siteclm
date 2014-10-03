@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-    <name>test2</name>
-    <url>urltest</url>
+    <name>Collège Louise Michel Lille</name>
+    <url>www.collegelouisemichellille.fr</url>
     <adminId>adminidtest</adminId>
-    <adminpwd>adminpwdtest</adminpwd>
+    <adminpwd>testadminpwd</adminpwd>
+    <installStatus>1</installStatus>
 </site>

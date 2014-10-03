@@ -18,7 +18,7 @@ switch ($action) {
 			header('Location: ?controler=install&action=siteNameConfig');
 		}
 		else {
-			$templateTitle='Site Install';
+			$templateTitle='Site Install - Base de données';
 			$formAction='?controler=install&action=bddFirstConfig';
 			require_once 'template/bddconfig.php';
 		}
@@ -28,11 +28,16 @@ switch ($action) {
 	case 'siteNameConfig':
 		$siteManager = new SiteManager('config/site.config.xml');
 		
-		$siteManager->setName('test2');
-		$siteManager->url('testurl2');
-		$siteManager->adminId('testadminid2');
-		$siteManager->adminpwd('testadminpwd');
-		echo($siteManager->name().','.$siteManager->url().','.$siteManager->adminId().','.$siteManager->adminpwd());
+		if (	!empty($_POST['sitename'])
+			&&	!empty($_POST['urlsite']))
+		{
+			$siteManager->setName($_POST['sitename']);
+			$siteManager->setUrl($_POST['urlsite']);
+		} else {
+			$templateTitle='Site Install - Identité';
+			$formAction='?controler=install&action=siteNameConfig';
+			require_once 'template/siteconfig.php';
+		}
 	break;
 	
 	case 'siteAdminConfig':
