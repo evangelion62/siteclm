@@ -86,7 +86,8 @@
     	<img class="featurette-image img-responsive" src="web/img/orange.gif" alt="Generic placeholder image">
     </div>
 </div>
-<div><button type="button" class="btn btn-lg btn-primary" disabled="disabled">Plus d'actualité</button></div>
+<br>
+<div class="row"><button type="button" class="btn btn-lg btn-primary center-block" disabled="disabled">Plus d'actualité</button></div>
 <?php
 $contents = ob_get_clean();
 if (is_file('template/layout.php')){
