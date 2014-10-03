@@ -2,12 +2,13 @@
 /*template de configuration de la  bdd
  * varriable attendu $formAction avec la cible du formulaire
 * varriable annex $userErrors['bdderror'] et $bddLastConfig[]
-* Accessible à ?controler=install&action=siteadminconfig*/
+* Accessible à ?controler=install&action=siteAdminConfig*/
 ob_start();?>
 
 	<h1>Procédure d'installation du site</h1>
 	<p>Etape 3 - Identité de votre administrateur<br>
 <form class="form-horizontal" role="form" action="<?php if (!empty($formAction)){echo $formAction;}?>" method="POST">
+	  <span class="label label-warning">Warning</span>
 	  <p>
 	  	Important : L'administrateur possède l'accès à l'ensemble du site et à toutes les informations sensibles. Notez soigneusement l'identifiant et le mot de passe et conservez-les à l'abri des regards indiscrets. 
 	  </p>
