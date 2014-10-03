@@ -67,6 +67,7 @@
     	<img class="featurette-image img-responsive" src="web/img/orange.gif" alt="Generic placeholder image">
     </div>
 </div>
+<hr>
 <div class="row featurette">
     <div class="col-md-5">
       <img class="featurette-image img-responsive" src="web/img/pink.gif" alt="Generic placeholder image">

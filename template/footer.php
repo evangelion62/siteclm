@@ -3,7 +3,7 @@
 	<footer class="footer" >
         <div class="row">
         	<div class="col-md-2" >
-        		<h4>Adresses utiles</h4>
+        		<h4>Liens utiles</h4>
         		<ol class="list-unstyled">
 					<li>Violence</li>
 					<li>Inspection académique</li>
@@ -13,7 +13,7 @@
         	<div class="col-md-2">
         		<h4>Prévention Médiation</h4>
         		<ol class="list-unstyled">
-					<li>Citeo</li>
+					<li><a href="http://www.citeo.org/" alt="site citeo" style="color:#333; " target="_blank">Citeo</a></li>
 					<li>Itinéraire</li>
 				</ol>
 			</div>
