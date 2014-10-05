@@ -88,7 +88,11 @@
     </div>
 </div>
 <br>
-<div class="row"><button type="button" class="btn btn-lg btn-primary center-block" disabled="disabled">Plus d'actualité</button></div>
+<div class="row">
+	<div class="col-md-5">
+		<a href="?controler=actu&action=allActu" class="btn btn-primary btn-lg active center-block" role="button">Plus d'actualité</a>
+	</div>
+</div>
 <?php
 $contents = ob_get_clean();
 if (is_file('template/layout.php')){
