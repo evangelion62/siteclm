@@ -33,6 +33,7 @@ switch ($action) {
 		{
 			$siteManager->setName($_POST['sitename']);
 			$siteManager->setUrl($_POST['urlsite']);
+			header('Location: ?controler=install&action=siteAdminConfig');
 		} else {
 			$templateTitle='Site Install - Identité';
 			$formAction='?controler=install&action=siteNameConfig';
@@ -41,6 +42,8 @@ switch ($action) {
 	break;
 	
 	case 'siteAdminConfig':
+		$templateTitle='Site Install - Administrateur';
+		$formAction='?controler=install&action=siteAdminConfig';
 		require_once 'template/siteadminconfig.php';
 	break;
 	default:

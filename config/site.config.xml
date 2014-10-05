@@ -4,5 +4,5 @@
     <url>www.collegelouisemichellille.fr</url>
     <adminId>adminidtest</adminId>
     <adminpwd>testadminpwd</adminpwd>
-    <installStatus>1</installStatus>
+    <installStatus>none</installStatus>
 </site>
