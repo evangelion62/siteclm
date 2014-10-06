@@ -25,14 +25,14 @@
 	</head>
 	<body>
 		<!-- navbar======================================================== -->
-		<?php if (is_file('template/navbar.php')){require_once 'template/navbar.php';}?>
+		<?php if (is_file('template/layout/navbar.php')){require_once 'template/layout/navbar.php';}?>
 		
 		<div class='container'>
 		<?php if (!empty($contents)) {echo $contents;}?>
 		</div>
 		
 		<!-- footer======================================================== -->
-		<?php if (is_file('template/footer.php')){require_once 'template/footer.php';}?>
+		<?php if (is_file('template/layout/footer.php')){require_once 'template/layout/footer.php';}?>
 		
 		<!-- js============================================================ -->
 	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

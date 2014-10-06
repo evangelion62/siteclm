@@ -30,7 +30,7 @@ ob_start();?>
 	</form>
 <?php
 $contents = ob_get_clean();
-if (is_file('template/layout.php')){
-	require_once 'template/emptylayout.php';
+if (is_file('template/layout/layout.php')){
+	require_once 'template/layout/emptylayout.php';
 }
 ?>

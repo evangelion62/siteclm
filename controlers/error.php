@@ -25,7 +25,7 @@ switch ($action) {
 					'user'=>$bddManager->user()
 			);
 			$formAction='?controler=error&action=bddBadConfig';
-			require_once 'template/bddconfig.php';
+			require_once 'template/install/bddconfig.php';
 		}
 		break;
 	

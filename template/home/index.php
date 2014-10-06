@@ -95,8 +95,8 @@
 </div>
 <?php
 $contents = ob_get_clean();
-if (is_file('template/layout.php')){
-	require_once 'template/layout.php';
+if (is_file('template/layout/layout.php')){
+	require_once 'template/layout/layout.php';
 }
 ?>
 

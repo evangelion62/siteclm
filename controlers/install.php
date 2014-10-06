@@ -21,7 +21,7 @@ switch ($action) {
 		else {
 			$templateTitle='Site Install - Base de données';
 			$formAction='?controler=install&action=bddFirstConfig';
-			require_once 'template/bddconfig.php';
+			require_once 'template/install/bddconfig.php';
 		}
 	break;
 	
@@ -39,7 +39,7 @@ switch ($action) {
 		} else {
 			$templateTitle='Site Install - Identité';
 			$formAction='?controler=install&action=siteNameConfig';
-			require_once 'template/siteconfig.php';
+			require_once 'template/install/siteconfig.php';
 		}
 	break;
 	
@@ -58,7 +58,7 @@ switch ($action) {
 		}else {
 			$templateTitle='Site Install - Administrateur';
 			$formAction='?controler=install&action=siteAdminConfig';
-			require_once 'template/siteadminconfig.php';
+			require_once 'template/install/siteadminconfig.php';
 		}
 	break;
 	
