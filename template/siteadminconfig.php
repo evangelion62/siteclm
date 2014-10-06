@@ -13,7 +13,7 @@ ob_start();?>
 	  <div class="form-group">
 	    <label for="adminId" class="col-sm-2 control-label">Identifiant Administrateur</label>
 	    <div class="col-sm-10">
-	      <input type="text" class="form-control" name="adminId" id="adminId" placeholder="Votre identifiant admisnistrateur..." >
+	      <input type="text" class="form-control" name="adminId" id="adminId" placeholder="Votre identifiant administrateur..." >
 	    </div>
 	  </div>
 	  <div class="form-group">
