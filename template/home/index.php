@@ -48,6 +48,14 @@
   </a>
 </div>
 <br>
+<div class="jumbotron">
+  <h1>Collège Louise Michel</h1>
+  <p>14, rue de Cannes,</br> 
+     59000 Lille</br>
+  	 Tél : 03.20.97.16.56
+  </p>
+  <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
+</div>
 <div class="row featurette">
     <div class="col-md-5">
       <img class="featurette-image img-responsive" src="web/img/pink.gif" alt="Generic placeholder image">
