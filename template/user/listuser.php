@@ -37,6 +37,17 @@ ob_start();?>
 		  <a href="?controler=user&action=deleteUser&id=#" class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></a>
 		</div></td>
   	</tr>
+  	<tr>
+  		<td>#</td>
+  		<td>Sébastien</td>
+  		<td>Ronger</td>
+  		<td>idsebastien</td>
+  		<td>pwronger</td>
+  		<td><div class="btn-group">
+		  <a href="?controler=user&action=updateUser&id=#" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span></a>
+		  <a href="?controler=user&action=deleteUser&id=#" class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></a>
+		</div></td>
+  	</tr>
 </table>
 
 <?php

@@ -44,6 +44,11 @@
     ...
   </div>
 </div>
+<ul class="pagination">
+  <li class="disabled"><a href="#">&laquo;</a></li>
+  <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+  ...
+</ul>
 <?php
 $contents = ob_get_clean();
 if (is_file('template/layout/layout.php')){
