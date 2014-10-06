@@ -24,7 +24,7 @@
 					</ul>
 				</li>
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-heart"></span> Vie du Collège<span class="caret"></span></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-th-large"></span> Vie du Collège<span class="caret"></span></a>
 					<ul class="dropdown-menu" role="menu">
 						<li><a href="?controler=actu&action=allActu">Actualité</a></li>
 						<li><a href="#">Collège en images</a></li>

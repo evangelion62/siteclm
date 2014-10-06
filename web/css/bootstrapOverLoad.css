@@ -8,6 +8,9 @@ body{
 	padding-left: 5px;
 }
 
+.navbar-right .dropdown{
+	margin-right: 10px;
+}
 /********************footer********************/
 .footer .row h4{
 	height: 35px;
