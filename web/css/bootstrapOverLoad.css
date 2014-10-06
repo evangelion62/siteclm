@@ -11,6 +11,10 @@ body{
 .navbar-right li{
 	margin-right: 10px;
 }
+
+.nav{
+	font-size: 1.2em;
+}
 /********************footer********************/
 .footer .row h4{
 	height: 35px;
