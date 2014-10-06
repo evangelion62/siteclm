@@ -37,12 +37,7 @@
 				</li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Connexion<span class="caret"></span></a>
-					<ul class="dropdown-menu" role="menu">
-						<li><a href="#">Actualité</a></li>
-					</ul>
-				</li>
+				<li ><a href="?controler=user&action=connectUser"><span class="glyphicon glyphicon-user"></span> Connexion</a></li>
 			</ul>
 		</div>
 	</div>
