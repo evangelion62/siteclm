@@ -2,7 +2,7 @@
 <site>
     <name>Collège Louise Michel Lille</name>
     <url>www.collegelouisemichellille.fr</url>
-    <adminId>adminidtest</adminId>
-    <adminpwd>testadminpwd</adminpwd>
+    <adminId>Administrateur</adminId>
+    <adminpwd>test</adminpwd>
     <installStatus>none</installStatus>
 </site>

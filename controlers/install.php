@@ -46,9 +46,24 @@ switch ($action) {
 	/* étape 3
 	 * paramétrage de l'administrateur*/
 	case 'siteAdminConfig':
-		$templateTitle='Site Install - Administrateur';
-		$formAction='?controler=install&action=siteAdminConfig';
-		require_once 'template/siteadminconfig.php';
+		$siteManager = new SiteManager('config/site.config.xml');
+		
+		if (	!empty($_POST['adminId'])
+			&&	!empty($_POST['adminMdp'])) 
+		{
+			$siteManager->setAdminId($_POST['adminId']);
+			$siteManager->setAdminpwd($_POST['adminMdp']);
+			
+			header('Location: ?controler=install&action=final');
+		}else {
+			$templateTitle='Site Install - Administrateur';
+			$formAction='?controler=install&action=siteAdminConfig';
+			require_once 'template/siteadminconfig.php';
+		}
+	break;
+	
+	case 'final':
+		header('Location: ?controler=index');
 	break;
 	
 	default:
