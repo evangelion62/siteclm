@@ -1,15 +1,27 @@
 <?php
 
 switch ($action){
-	case 'login':
+	case 'addUser':
 		
 	break;
 	
-	case 'logout':
+	case 'listUser':
 	
 	break;
 	
-	case 'addUser':
+	case 'updateUser':
+	
+	break;
+	
+	case 'deleteUser':
+	
+	break;
+		
+	case 'connectUser':
+	
+	break;
+	
+	case 'disconnectUser':
 	
 	break;
 	
