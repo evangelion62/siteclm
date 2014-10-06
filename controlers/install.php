@@ -1,7 +1,8 @@
 <?php
 
 switch ($action) {
-	/*parametrage du fichier xml si jamais paramétré*/
+	/* étape 1 -
+	 * parametrage du fichier xml si jamais paramétré*/
 	case 'bddFirstConfig':
 		$bddManager = new BddManager('config/bdd.config.xml');
 		
@@ -24,7 +25,8 @@ switch ($action) {
 		}
 	break;
 	
-	/*paramétrage du nom du site et de l'adresse DNS*/
+	/* étape 2 - 
+	 * paramétrage du nom du site et de l'adresse DNS*/
 	case 'siteNameConfig':
 		$siteManager = new SiteManager('config/site.config.xml');
 		
@@ -41,11 +43,14 @@ switch ($action) {
 		}
 	break;
 	
+	/* étape 3
+	 * paramétrage de l'administrateur*/
 	case 'siteAdminConfig':
 		$templateTitle='Site Install - Administrateur';
 		$formAction='?controler=install&action=siteAdminConfig';
 		require_once 'template/siteadminconfig.php';
 	break;
+	
 	default:
 		header('Location: ?controler=install&action=bddFirstConfig');
 	break;
