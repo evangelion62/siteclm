@@ -1,4 +1,4 @@
-# [siteclm]
+siteclm
 =======
 
 site du college louise michel
