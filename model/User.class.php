@@ -6,8 +6,8 @@ class User {
 	private $_mail;
 	
 	/*constructeur*/
-	public function __construct(){
-		
+	public function __construct(array $donnees){
+		$this->hydrate($donnees);
 	}
 	
 	/*fonction d'hydratation - initialise l'objet en appelant les seters*/
@@ -55,5 +55,15 @@ class User {
 		}
 	}
 	
+	public function setPass($pass){
+		if (is_string($pass) && strlen($pass)<254 && !empty($pass)){
+			$this->_pass=$pass;
+		}
+	}
 	
+	public function setMail($mail){
+		if (is_string($mail) && strlen($mail)<254 && !empty($mail)){
+			$this->_mail=$mail;
+		}
+	}
 }
