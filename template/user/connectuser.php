@@ -5,7 +5,7 @@
 ob_start();?>
 
 	<h1>Espace de connexion</h1>
-	<p>Identifiant & Mot de passe :<br>
+	<p>Identifiant et Mot de passe :<br>
 <form class="form-horizontal" role="form" action="<?php if (!empty($formAction)){echo $formAction;}?>" method="POST">
 	  <div class="form-group">
 	    <label for="userId" class="col-sm-2 control-label">Votre identifiant</label>

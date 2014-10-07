@@ -48,7 +48,7 @@ ob_start();?>
 <ul>
 	<li>En médiatisant toutes les résussites</li>
 	<li>En ayant une politique de communication de réseau et interne au réseau</li>
-<ul>
+</ul>
 <h5>Adopté lors du conseil d'administration du 1er juillet 2010.</h5>
 <?php
 $contents = ob_get_clean();

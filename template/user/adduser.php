@@ -5,7 +5,7 @@
 ob_start();?>
 
 	<h1>Ajout d'utilisateur</h1>
-	<p>Identifiant & Mot de passe :<br>
+	<p>Identifiant et Mot de passe :<br>
 <form class="form-horizontal" role="form" action="<?php if (!empty($formAction)){echo $formAction;}?>" method="POST">
 	  <p><span class="label label-warning">Important</span> Notez soigneusement l'identifiant et le mot de passe et conservez-les à l'abri des regards indiscrets. 
 	  </p>
