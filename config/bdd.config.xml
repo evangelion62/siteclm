@@ -1,0 +1,7 @@
+<?xml version="1.0" standalone="yes"?>
+<bdd>
+		<host>localhost</host>
+		<dbname>siteclm</dbname>
+		<user>root</user>
+		<pwd></pwd>
+</bdd>
