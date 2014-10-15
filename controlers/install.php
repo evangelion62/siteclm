@@ -63,6 +63,9 @@ switch ($action) {
 	break;
 	
 	case 'final':
+		//création des tables de l'application
+		$userManager = new UserManager($bdd);
+		$userManager->createTable();
 		header('Location: ?controler=index');
 	break;
 	
