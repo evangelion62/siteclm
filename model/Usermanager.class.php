@@ -1,29 +1,7 @@
 <?php
-class UserManager {
-	private $_db;
+class UserManager extends EntityManager{
 	
-	/*constructeur*/
-	public function __construct($db)
-	{
-		$this->setDb($db);
-	}
 	
-	public function setDb(PDO $db)
-	{
-		$this->_db = $db;
-	}
-	public function createTable() {
-		$q= $this->_db->prepare(
-			"CREATE TABLE IF NOT EXISTS `user` (
-			id int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'idex primaire',
-			`name` varchar(255) NOT NULL COMMENT 'nom d''utilisateur',
-			pass varchar(255) NOT NULL COMMENT 'mot de passe',
-			mail varchar(255) DEFAULT NULL COMMENT 'e mail',
-			PRIMARY KEY (id)
-			) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1"
-		);
-		$q->execute();
-	}
 	/*CRUD*/
 	public function add(User $user) {
 		$q = $this->_db->prepare("INSERT INTO user SET name = :name, pass = :pass, mail = :mail");

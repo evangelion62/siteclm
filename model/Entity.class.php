@@ -1,6 +1,8 @@
 <?php
 abstract class Entity{
 	/*constante de la class Entity*/
+	const TYPE = 'TYPE';
+	const LEN = 'LEN';
 	const VARCHAR = 'varchar';
 	const VARCHAR_MAX_LEN = 255;
 	const INT = 'int';
@@ -8,11 +10,11 @@ abstract class Entity{
 	const TEXT = 'text';
 	const DATETIME = 'datetime';
 	const NOT_NULL = 'NOT NULL';
+	const DEFAULT_NULL ='DEFAULT NULL';
+	const NULL_OR_NOT = 'NULL_OR_NOT';
 	const COMMENT = 'COMMENT';
 	
 	/*attributs*/
-	protected $_tables = array();//tableau contenant le nom des tables de l'entité
-	protected $_attributes = array();//tableau listant et tipant les attribues de la class pour création dynamique des tables
 	protected $_id;
 	
 	/*constructeur*/
@@ -56,5 +58,9 @@ abstract class Entity{
 			$this->_id = $id;
 		}
 	}
-	
+
+	//méthodes
+	public function show(){
+		print_r($this);
+	}
 }
