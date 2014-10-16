@@ -25,7 +25,15 @@
 	</head>
 	<body>
 		<div class='container'>
-		<?php if (!empty($contents)) {echo $contents;}?>
+		<?php if (!empty($userErrors))
+			{
+				foreach ($userErrors as $value) {
+					echo '<span class="label label-danger">Erreur</span> '.$value.'';
+				}
+			}
+	
+			if (!empty($contents)) {echo $contents;}
+		?>
 		</div>
 		
 		<!-- js============================================================ -->

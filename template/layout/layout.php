@@ -28,7 +28,15 @@
 		<?php if (is_file('template/layout/navbar.php')){require_once 'template/layout/navbar.php';}?>
 		
 		<div class='container'>
-		<?php if (!empty($contents)) {echo $contents;}?>
+		<?php if (!empty($userErrors))
+			{
+				foreach ($userErrors as $value) {
+					echo '<span class="label label-danger">Erreur</span> '.$value.'';
+				}
+			}
+	
+			if (!empty($contents)) {echo $contents;}
+		?>
 		</div>
 		
 		<!-- footer======================================================== -->
