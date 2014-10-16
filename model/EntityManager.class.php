@@ -23,10 +23,16 @@ abstract class EntityManager {
 			foreach ($properties as $keyName => $dbParams) {
 				$propertiesStr = $propertiesStr.'`'.$keyName.'` '.$dbParams['TYPE'].'('.$dbParams['LEN'].') '.$dbParams['NULL_OR_NOT'].' COMMENT \''.$dbParams['COMMENT'].'\',';
 			}
+			$key = '';
+			foreach ($properties as $keyName => $dbParams){
+				if (!empty($dbParams['KEY'])){
+					$key = $key.$dbParams['KEY'].' `'.$keyName.'` (`'.$keyName.'`),';
+				}
+			}
 			$q = $this->_db->prepare(
 				"CREATE TABLE IF NOT EXISTS `".$table."` (
 				id int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'idex primaire',
-				".$propertiesStr."
+				".$propertiesStr.$key."
 				PRIMARY KEY (id)
 				) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1"
 			);

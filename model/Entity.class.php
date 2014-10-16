@@ -13,6 +13,9 @@ abstract class Entity{
 	const DEFAULT_NULL ='DEFAULT NULL';
 	const NULL_OR_NOT = 'NULL_OR_NOT';
 	const COMMENT = 'COMMENT';
+	const KEY = 'KEY';
+	const PRIMARY_KEY = 'PRIMARY KEY';
+	const UNIQUE_KEY = 'UNIQUE KEY';
 	
 	/*attributs*/
 	protected $_id;

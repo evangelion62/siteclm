@@ -8,7 +8,8 @@ class User extends Entity{
 				Entity::TYPE=>Entity::VARCHAR,
 				Entity::LEN=>Entity::VARCHAR_MAX_LEN,
 				Entity::NULL_OR_NOT=>Entity::NOT_NULL,
-				Entity::COMMENT=>'nom d utilisateur'
+				Entity::COMMENT=>'nom d utilisateur',
+				Entity::KEY=>Entity::UNIQUE_KEY,
 			),
 			'pass'=>array(	
 				Entity::TYPE=>Entity::VARCHAR,
