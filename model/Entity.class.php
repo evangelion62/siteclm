@@ -32,9 +32,10 @@ abstract class Entity{
 		{
 			// On récupère le nom du setter correspondant à l'attribut.
 			$method = 'set'.ucfirst($key);
+			$property = '_'.$key;
 	
 			// Si le setter correspondant existe.
-			if (method_exists($this, $method))
+			if (property_exists(get_class($this), $property))
 			{
 				// On appelle le setter.
 				$this->$method($value);
@@ -42,17 +43,21 @@ abstract class Entity{
 		}
 	}
 	
-	/*geters*/
-	public function id(){
-		return $this->_id;
+	/*geters et seters automatique*/
+	function __call($m,$p) {
+		//geters
+		if (property_exists(get_class($this), '_'.$m)){
+			$m = '_'.$m;
+			return $this->$m;
+		}
+		//seters
+		if (!strncasecmp($m,'set',3)){
+			$v = '_'.strtolower(substr($m, 3));
+			if(property_exists(get_class($this), $v)){
+				$this->$v = $p[0];
+			}
+		}
 	}
-	public function tables() {
-		return $this->_tables;
-	}
-	public function attributes() {
-		return $this->_attributes;
-	}
-	
 	
 	/*seters*/
 	public function setId($id){
@@ -60,10 +65,6 @@ abstract class Entity{
 		if ($id > 0){
 			$this->_id = $id;
 		}
-	}
+ 	}
 
-	//méthodes
-	public function show(){
-		print_r($this);
-	}
 }

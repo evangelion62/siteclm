@@ -129,7 +129,6 @@ abstract class EntityManager {
 				}
 		
 				$result = $q->execute();
-				print_r($q->queryString);
 				$q->closeCursor();
 				return $result;
 			}
@@ -138,13 +137,18 @@ abstract class EntityManager {
 			throw new Exception('l\'entity et l\'entityManager sont incompatible.');
 		}
 		
-// 		$q = $this->_db->prepare("UPDATE user SET name = :name, pass = :pass, mail = :mail WHERE id = :id");
+	}
 	
-// 		$q->bindValue(':name', $user->name());
-// 		$q->bindValue(':pass', $user->pass());
-// 		$q->bindValue(':mail', $user->mail());
-// 		$q->bindValue(':id', $user->id());
-	
-// 		$q->execute();
+	public function delete($value,$selectKeyName = 'id') {
+		$entityName = $this->_entityName;
+		$entityProperties = $entityName::$_properties;
+		foreach ($entityProperties as $table => $properties) {
+			if (is_string($value)){
+				$this->_db->exec('DELETE FROM `'.$table.'` WHERE '.$selectKeyName.' =\''.$value.'\'');
+			}else {
+				$this->_db->exec('DELETE FROM `'.$table.'` WHERE '.$selectKeyName.' ='.$value);
+			}
+			
+		}
 	}
 }
