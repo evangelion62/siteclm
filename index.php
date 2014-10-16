@@ -9,4 +9,4 @@
 	}
 	
 	$executTime = microtime(true) - $timestart;
-	echo 'temp d\'execution :'.$executTime;
+	echo 'temp d\'execution :'.$executTime.'s';
