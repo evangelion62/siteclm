@@ -1,7 +1,5 @@
 <?php ob_start();?>
-<div>
-	<textarea name="editor1" id="editor1" rows="10" cols="80"></textarea>
-</div>
+<textarea name="editor1" id="editor1"></textarea>
  <script>
                 // Replace the <textarea id="editor1"> with a CKEditor
                 // instance, using default configuration.
