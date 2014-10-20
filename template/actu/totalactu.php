@@ -4,51 +4,86 @@
     <img class="media-object" src="web/img/vert-64x64.gif" alt="...">
   </a>
   <div class="media-body">
-    <h4 class="media-heading">Media heading</h4>
+    <h4 class="media-heading"><a href="#">Media heading</a></h4>
     <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+    <p>
+		<div class="btn-group">
+	      	<a href="#" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></a>
+			<a href="#" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span></a>
+			<a href="#" class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></a>
+		</div>
+	</p>
   </div>
 </div>
-
+<hr>
 <div class="media">
   <a class="pull-left" href="#">
     <img class="media-object" src="web/img/vert-64x64.gif" alt="...">
   </a>
   <div class="media-body">
-    <h4 class="media-heading">Media heading</h4>
+    <h4 class="media-heading"><a href="#">Media heading</a></h4>
     <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+    <p>
+		<div class="btn-group">
+	      	<a href="#" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></a>
+			<a href="#" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span></a>
+			<a href="#" class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></a>
+		</div>
+	</p>
   </div>
 </div>
-
+<hr>
 <div class="media">
   <a class="pull-left" href="#">
     <img class="media-object" src="web/img/vert-64x64.gif" alt="...">
   </a>
   <div class="media-body">
-    <h4 class="media-heading">Media heading</h4>
+    <h4 class="media-heading"><a href="#">Media heading</a></h4>
     <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+    <p>
+		<div class="btn-group">
+	      	<a href="#" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></a>
+			<a href="#" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span></a>
+			<a href="#" class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></a>
+		</div>
+	</p>
   </div>
 </div>
-
+<hr>
 <div class="media">
   <a class="pull-left" href="#">
     <img class="media-object" src="web/img/vert-64x64.gif" alt="...">
   </a>
   <div class="media-body">
-    <h4 class="media-heading">Media heading</h4>
+    <h4 class="media-heading"><a href="#">Media heading</a></h4>
     <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+    <p>
+		<div class="btn-group">
+	      	<a href="#" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></a>
+			<a href="#" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span></a>
+			<a href="#" class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></a>
+		</div>
+	</p>
   </div>
 </div>
-
+<hr>
 <div class="media">
   <a class="pull-left" href="#">
     <img class="media-object" src="web/img/vert-64x64.gif" alt="...">
   </a>
   <div class="media-body">
-    <h4 class="media-heading">Media heading</h4>
+    <h4 class="media-heading"><a href="#">Media heading</a></h4>
     <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+    <p>
+		<div class="btn-group">
+	      	<a href="#" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></a>
+			<a href="#" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span></a>
+			<a href="#" class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></a>
+		</div>
+	</p>
   </div>
 </div>
-
+<hr>
 <div class="row">
 	<div class="col-md-4 col-md-push-4">
 		<ul class="pagination">
