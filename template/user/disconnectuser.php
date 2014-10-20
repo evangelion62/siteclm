@@ -4,7 +4,7 @@
 
 ob_start();?>
 <div class="jumbotron">
-  <h1><span class="label label-success">Déconnexion réussie ! </span></h1><>
+  <h1><span class="label label-success">Déconnexion réussie ! </span></h1>
   <p><a class="btn btn-primary btn-lg" role="button">Se reconnecter ?</a></p>
   <p><a class="btn btn-primary btn-lg" role="button">Retourner à l'accueil</a></p>
 </div>

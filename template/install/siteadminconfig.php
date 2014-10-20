@@ -19,7 +19,7 @@ ob_start();?>
 	  <div class="form-group">
 	    <label for="adminMdp" class="col-sm-2 control-label">Mot de passe</label>
 	    <div class="col-sm-10">
-	      <input type="text" class="form-control" name="adminMdp" id="adminMdp" placeholder="Votre mot de passe...">
+	      <input type="password" class="form-control" name="adminMdp" id="adminMdp" placeholder="Votre mot de passe...">
 	    </div>
 	  </div>
 	  <div class="form-group">
