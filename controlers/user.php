@@ -2,10 +2,21 @@
 
 switch ($action){
 	case 'addUser':
-		require_once 'template/user/adduser.php';
+		if (	!empty($_POST['name'])
+			&&	!empty($_POST['pass'])){
+			$userManager = new UserManager($bdd);
+			$user = new User($_POST);
+			$userManager->add($user);
+			header('Location: ?controler=user&action=listUser');
+		}else{
+			$formAction = '?controler=user&action=addUser';
+			require_once 'template/user/adduser.php';
+		}
 	break;
 	
 	case 'listUser':
+		$userManager = new UserManager($bdd);
+		$users = $userManager->getList();
 		require_once 'template/user/listuser.php';
 	break;
 	
@@ -14,6 +25,7 @@ switch ($action){
 	break;
 	
 	case 'deleteUser':
+		
 		require_once 'template/user/deleteuser.php';
 	break;
 		

@@ -15,39 +15,21 @@ ob_start();?>
   			<a href="?controler=user&action=addUser&id=#" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></a>
 		</div></th>
   	</tr>
+  	<?php foreach ($users as $user) {
+  	?>
   	<tr>
-  		<td>#</td>
-  		<td>jean</td>
-  		<td>toto</td>
-  		<td>idtoto</td>
-  		<td>pwdtot</td>
+  		<td><?php echo $user->id();?></td>
+  		<td></td>
+  		<td></td>
+  		<td><?php echo $user->name();?></td>
+  		<td><?php echo $user->pass();?></td>
   		<td><div class="btn-group">
-		  <a href="?controler=user&action=updateUser&id=#" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span></a>
-		  <a href="?controler=user&action=deleteUser&id=#" class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></a>
+		  <a href="?controler=user&action=updateUser&id=<?php echo $user->id();?>" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span></a>
+		  <a href="?controler=user&action=deleteUser&id=<?php echo $user->id();?>" class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></a>
 		</div></td>
   	</tr>
-  	<tr>
-  		<td>#</td>
-  		<td>Vincent</td>
-  		<td>Boulanger</td>
-  		<td>idvincent</td>
-  		<td>pwboulanger</td>
-  		<td><div class="btn-group">
-		  <a href="?controler=user&action=updateUser&id=#" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span></a>
-		  <a href="?controler=user&action=deleteUser&id=#" class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></a>
-		</div></td>
-  	</tr>
-  	<tr>
-  		<td>#</td>
-  		<td>Sébastien</td>
-  		<td>Ronger</td>
-  		<td>idsebastien</td>
-  		<td>pwronger</td>
-  		<td><div class="btn-group">
-		  <a href="?controler=user&action=updateUser&id=#" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span></a>
-		  <a href="?controler=user&action=deleteUser&id=#" class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></a>
-		</div></td>
-  	</tr>
+  	<?php 
+  	}?>
 </table>
 
 <?php
