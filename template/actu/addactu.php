@@ -2,7 +2,9 @@
 <h1>Ajout d'Actualité</h1>
 <form role="form"
 	action="<?php if (!empty($formAction)){echo $formAction;}?>"
-	method="POST">
+	method="POST"
+	enctype="multipart/form-data"
+	>
 	<div class="form-group">
 		<label for="name">Titre de l'Actualité</label> <input type="text"
 			class="form-control" id="name" placeholder="Titre de l'Actualité...">
