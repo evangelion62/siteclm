@@ -6,7 +6,7 @@
 	enctype="multipart/form-data"
 	>
 	<div class="form-group">
-		<label for="name">Titre de l'Actualité</label> <input type="text"
+		<label for="name">Titre de l'actualité</label> <input type="text"
 			class="form-control" id="name" name="name" placeholder="Titre de l'Actualité...">
 	</div>
 	<div class="form-group">

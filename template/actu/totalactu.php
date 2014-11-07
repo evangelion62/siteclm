@@ -1,4 +1,7 @@
 <?php ob_start();?>
+<div class="btn-group">
+	      	<a href="?controler=actu&action=addActu" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span> Ajouter une actualité</a>
+		</div>
 <?php foreach ($actus as $value) {
 	echo '<div class="media">
   <a class="pull-left" href="#">
@@ -9,9 +12,8 @@
     <p>'.$value->content().'</p>
     <p>
 		<div class="btn-group">
-	      	<a href="?controler=actu&action=addActu" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></a>
-			<a href="?controler=actu&action=updateActu&id='.$value->id().'" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span></a>
-			<a href="#" class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></a>
+			<a href="?controler=actu&action=updateActu&id='.$value->id().'" class="btn btn-default">Modifier <span class="glyphicon glyphicon-pencil"></span></a>
+			<a href="?controler=actu&action=deletActu&id='.$value->id().'" class="btn btn-default">Supprimer <span class="glyphicon glyphicon-trash"></span></a>
 		</div>
 	</p>
   </div>
