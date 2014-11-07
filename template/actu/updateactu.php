@@ -24,6 +24,7 @@
        CKEDITOR.replace( 'content' );
 	</script>
 	</div>
+	<input type="text" id="id" name="name" value="<?php echo $actu->id()?>">
 	<input type="submit" class="btn btn-default pull-right" value="Valider">
 </form>
 <?php

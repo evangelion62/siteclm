@@ -1,7 +1,6 @@
 <?php ob_start();?>
 <h1><?php echo $actu->name() ?></h1>
 <p><?php echo $actu->content()?></p>
-	<?php ?>
 <?php
 $contents = ob_get_clean ();
 $ckeditor = true;
