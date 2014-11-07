@@ -17,14 +17,14 @@
 	</div>
 	<div class="form-group">
 		<label for="content">Votre Actualité</label>
-		<textarea name="content" id="content" name="content"><?php echo $actu->name() ?></textarea>
+		<textarea name="content" id="content"><?php echo $actu->content() ?></textarea>
 		<script>
          // Replace the <textarea id="content"> with a CKEditor
         // instance, using default configuration.
        CKEDITOR.replace( 'content' );
 	</script>
 	</div>
-	<input type="text" id="id" name="name" value="<?php echo $actu->id()?>">
+	<input type="hidden" id="id" name="id" value="<?php echo $actu->id()?>">
 	<input type="submit" class="btn btn-default pull-right" value="Valider">
 </form>
 <?php

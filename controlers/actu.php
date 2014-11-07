@@ -27,16 +27,17 @@ switch ($action) {
 	break;
 	
 	case 'updateActu':
-		if (!empty($_GET['id'])){
+		if (!empty($_GET['id']) && empty($_POST['name']) && empty($_POST['content'])){
 			$actuManager= new ActuManager($bdd);
 			$actu = $actuManager->get($_GET['id']);
 			$formAction = '?controler=actu&action=updateActu&id='.$_GET['id'];
 			require_once 'template/actu/updateactu.php';
-		}elseif (!empty($_POST['name']) && !empty($_POST['content'])){
+		}elseif (!empty($_POST['name']) && !empty($_POST['content']) && !empty($_GET['id'])){
 			$actuManager = new ActuManager($bdd);
 			$actu = new Actu($_POST);
+			$actu->setId($_GET['id']);
 			$actuManager->update($actu);
-			print_r($actu);
+			header('Location: ?controler=actu&action=allActu');
 		}
 	break;
 	
