@@ -10,7 +10,7 @@ switch ($action) {
 		if (!empty($_GET['id'])){
 			$actuManager = new ActuManager($bdd);
 			$actu = $actuManager->get($_GET['id']);
-			print_r($actu);
+			require_once 'template/actu/getactu.php';
 		}
 	break;
 	
@@ -25,6 +25,11 @@ switch ($action) {
 			require_once 'template/actu/addactu.php';
 		}
 	break;
+	
+	case 'updateActu':
+		
+	break;
+	
 	default:
 		;
 	break;
