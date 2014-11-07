@@ -7,7 +7,7 @@
 	>
 	<div class="form-group">
 		<label for="name">Titre de l'Actualité</label> <input type="text"
-			class="form-control" id="name" placeholder="Titre de l'Actualité...">
+			class="form-control" id="name" name="name" placeholder="Titre de l'Actualité...">
 	</div>
 	<div class="form-group">
 		<label for="img">Image d'illustration de l'Actualité</label> <input
@@ -16,15 +16,15 @@
 			serveur, cette image sert à illustré votre actualité.</p>
 	</div>
 	<div class="form-group">
-		<label for="editor1">Votre Actualité</label>
-		<textarea name="editor1" id="editor1"></textarea>
+		<label for="content">Votre Actualité</label>
+		<textarea name="content" id="content" name="content"></textarea>
 		<script>
-         // Replace the <textarea id="editor1"> with a CKEditor
+         // Replace the <textarea id="content"> with a CKEditor
         // instance, using default configuration.
-       CKEDITOR.replace( 'editor1' );
+       CKEDITOR.replace( 'content' );
 	</script>
 	</div>
-	<button type="submit" class="btn btn-default pull-right">Valider</button>
+	<input type="submit" class="btn btn-default pull-right" value="Valider">
 </form>
 <?php
 $contents = ob_get_clean ();
