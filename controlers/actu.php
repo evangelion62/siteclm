@@ -27,7 +27,17 @@ switch ($action) {
 	break;
 	
 	case 'updateActu':
-		
+		if (!empty($_GET['id'])){
+			$actuManager= new ActuManager($bdd);
+			$actu = $actuManager->get($_GET['id']);
+			$formAction = '?controler=actu&action=updateActu';
+			require_once 'template/actu/addactu.php';
+		}elseif (!empty($_POST['name']) && !empty($_POST['content'])){
+			$actuManager = new ActuManager($bdd);
+			$actu = new Actu($_POST);
+			$actuManager->update($actu);
+			header('Location: ?controler=actu&action=allActu');
+		}
 	break;
 	
 	default:

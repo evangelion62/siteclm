@@ -10,7 +10,7 @@
     <p>
 		<div class="btn-group">
 	      	<a href="?controler=actu&action=addActu" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></a>
-			<a href="#" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span></a>
+			<a href="?controler=actu&action=updateActu&id='.$value->id().'" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span></a>
 			<a href="#" class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></a>
 		</div>
 	</p>
