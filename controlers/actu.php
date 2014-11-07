@@ -30,13 +30,13 @@ switch ($action) {
 		if (!empty($_GET['id'])){
 			$actuManager= new ActuManager($bdd);
 			$actu = $actuManager->get($_GET['id']);
-			$formAction = '?controler=actu&action=updateActu';
-			require_once 'template/actu/addactu.php';
+			$formAction = '?controler=actu&action=updateActu&id='.$_GET['id'];
+			require_once 'template/actu/updateactu.php';
 		}elseif (!empty($_POST['name']) && !empty($_POST['content'])){
 			$actuManager = new ActuManager($bdd);
 			$actu = new Actu($_POST);
 			$actuManager->update($actu);
-			header('Location: ?controler=actu&action=allActu');
+			print_r($actu);
 		}
 	break;
 	

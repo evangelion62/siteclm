@@ -127,7 +127,6 @@ abstract class EntityManager {
 				foreach ($properties as $keyName => $dbParams) {
 					$q->bindValue(':'.$keyName, $entity->$keyName());
 				}
-		
 				$result = $q->execute();
 				$q->closeCursor();
 				return $result;
