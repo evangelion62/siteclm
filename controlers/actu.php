@@ -41,6 +41,14 @@ switch ($action) {
 		}
 	break;
 	
+	case 'deletActu':
+		if (!empty($_GET['id'])){
+			$actuManager = new ActuManager($bdd);
+			$actuManager->delete($_GET['id']);
+			header('Location: ?controler=actu&action=allActu');
+		}
+	break;
+	
 	default:
 		;
 	break;
