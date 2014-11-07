@@ -7,7 +7,7 @@
         		<ol class="list-unstyled">
 					<li>Violence</li>
 					<li><a href="http://www.ac-lille.fr/dsden59/" title="site académie de lille" target="_blank">Inspection académique</a></li>
-					<li>Rectorat</li>					
+					<li><a href="http://www1.ac-lille.fr/" title="rectorat de lille" target="_blank">Rectorat</a></li>				
 				</ol>
 			</div>
         	<div class="col-md-2">
@@ -42,7 +42,7 @@
 					<li>Projet</li>
 					<li>Etude</li>
 					<li>Activités</li>
-					<li>ZUP de Co</li>
+					<li><a href="http://www.zupdeco.org/" title="site zupdeco" target="_blank">ZUP de Co</a></li>
         		</ol>
 			</div>
         </div>

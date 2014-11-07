@@ -70,6 +70,8 @@ switch ($action) {
 		$userInfoManager->createTable();
 		$imgManager = new ImgManager($bdd);
 		$imgManager->createTable();
+		$actuManager = new ActuManager($bdd);
+		$actuManager->createTable();
 		
 		header('Location: ?controler=index');
 	break;
