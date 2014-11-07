@@ -93,17 +93,24 @@ abstract class EntityManager {
 	}
 	
 	/*revoi la liste de toutes les entité demandé*/
-	public function getList($orderBy='id')
+	public function getList($orderBy='id',$nb=9999,$desc=TRUE)
 	{
+		if ($desc){
+			$desc = ' DESC';
+		}else{
+			$desc = '';
+		}
+		$cmpt = 0;
 		$entityName = $this->_entityName;
 		$entityProperties = $entityName::$_properties;
 		$entitys = array();
 		
 		foreach ($entityProperties as $table => $properties) {
-			$q = $this->_db->query("SELECT * FROM `".$table."` ORDER BY ".$orderBy);
-			while ($donnees = $q->fetch(PDO::FETCH_ASSOC))
+			$q = $this->_db->query("SELECT * FROM `".$table."` ORDER BY ".$orderBy.$desc);
+			while (($donnees = $q->fetch(PDO::FETCH_ASSOC)) && ($cmpt<$nb))
 			{
 				$entitys[] = new $entityName($donnees);
+				$cmpt++;
 			}
 			return $entitys;
 		}
