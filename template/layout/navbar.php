@@ -28,6 +28,7 @@
 					<ul class="dropdown-menu" role="menu">
 						<li><a href="?controler=actu&action=allActu">Actualité</a></li>
 						<li><a href="?controler=album&action=allAlbum">Collège en images</a></li>
+						<li><a href="?controler=media">Médias</a></li>
 						<li><a href="#">Les Projets</a></li>
 						<li class="divider"></li>
 						<li class="dropdown-header">Les blogs du collège</li>

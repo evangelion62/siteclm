@@ -30,10 +30,17 @@
 		<?php if (is_file('template/layout/navbar.php')){require_once 'template/layout/navbar.php';}?>
 		
 		<div class='container'>
-		<?php if (!empty($userErrors))
+		<?php 
+			if (!empty($userErrors))
 			{
 				foreach ($userErrors as $value) {
 					echo '<span class="label label-danger">Erreur</span> '.$value.'';
+				}
+			}
+			if (!empty($userSuccess))
+			{
+				foreach ($userSuccess as $value) {
+					echo '<span class="label label-success">Succès</span> '.$value.'';
 				}
 			}
 	
