@@ -4,8 +4,8 @@
 		</div>
 <?php foreach ($actus as $value) {
 	echo '<div class="media">
-  <a class="pull-left" href="#">
-    <img class="media-object" src="web/img/vert-64x64.gif" alt="...">
+  <a class="pull-left" href="?controler=actu&action=getActu&id='.$value->id().'">
+    <img class="media-object" src="'.$value->img().'" alt="..." style="width:100px;">
   </a>
   <div class="media-body">
     <h4 class="media-heading"><a href="?controler=actu&action=getActu&id='.$value->id().'">'.$value->name().'</a></h4>

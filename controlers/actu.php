@@ -18,9 +18,15 @@ switch ($action) {
 		if (!empty($_POST['name']) && !empty($_POST['content'])){
 			$actuManager = new ActuManager($bdd);
 			$actu = new Actu($_POST);
+			if (!empty($_POST['imgActu'])){
+				echo $_POST['imgActu'];
+				$actu->setImg($_POST['imgActu']);
+			}
 			$actuManager->add($actu);
 			header('Location: ?controler=actu&action=allActu');
 		}else{
+			$imgManager = new ImgManager($bdd);
+			$imgs = $imgManager->getList('id',6);
 			$formAction = '?controler=actu&action=addActu';
 			require_once 'template/actu/addactu.php';
 		}
@@ -30,12 +36,18 @@ switch ($action) {
 		if (!empty($_GET['id']) && empty($_POST['name']) && empty($_POST['content'])){
 			$actuManager= new ActuManager($bdd);
 			$actu = $actuManager->get($_GET['id']);
+			$imgManager = new ImgManager($bdd);
+			$imgs = $imgManager->getList('id',6);
 			$formAction = '?controler=actu&action=updateActu&id='.$_GET['id'];
 			require_once 'template/actu/updateactu.php';
 		}elseif (!empty($_POST['name']) && !empty($_POST['content']) && !empty($_GET['id'])){
 			$actuManager = new ActuManager($bdd);
 			$actu = new Actu($_POST);
 			$actu->setId($_GET['id']);
+			if (!empty($_POST['imgActu'])){
+				echo $_POST['imgActu'];
+				$actu->setImg($_POST['imgActu']);
+			}
 			$actuManager->update($actu);
 			header('Location: ?controler=actu&action=allActu');
 		}

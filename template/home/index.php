@@ -77,7 +77,7 @@ foreach ($actus as $value) {
 <div class="row featurette">
     <?php if ($cmpt%2!=0){?>
     <div class="col-md-5">
-      <img class="featurette-image img-responsive" src="web/img/pink.gif" alt="Generic placeholder image">
+      <img class="featurette-image img-responsive" src="<?php echo $value->img()?>" alt="Generic placeholder image">
     </div>
     <div class="col-md-7">
       <h2 class="featurette-heading"><a href="?controler=actu&action=getActu&id=<?php echo $value->id()?>"><?php echo $value->name();?></a></h2>
@@ -89,7 +89,7 @@ foreach ($actus as $value) {
       <p class="lead"><?php echo substr(strip_tags($value->content()),0,800);?> ...</p>
     </div>
     <div class="col-md-5">
-      <img class="featurette-image img-responsive" src="web/img/pink.gif" alt="Generic placeholder image">
+      <img class="featurette-image img-responsive" src="<?php echo $value->img()?>" alt="Generic placeholder image">
     </div>
     <?php }?>
 </div>
