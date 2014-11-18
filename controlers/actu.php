@@ -37,7 +37,7 @@ switch ($action) {
 			$actuManager= new ActuManager($bdd);
 			$actu = $actuManager->get($_GET['id']);
 			$imgManager = new ImgManager($bdd);
-			$imgs = $imgManager->getList('id',6);
+			$imgs = $imgManager->getList('id',9);
 			$formAction = '?controler=actu&action=updateActu&id='.$_GET['id'];
 			require_once 'template/actu/updateactu.php';
 		}elseif (!empty($_POST['name']) && !empty($_POST['content']) && !empty($_GET['id'])){
