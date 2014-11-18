@@ -53,6 +53,6 @@ body{
 }
 
 /****************btn****************************/
-.btn{
+.btn,.dropdown-menu,.modal-content{
 	border-radius:0px;
 }
