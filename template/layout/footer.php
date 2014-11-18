@@ -1,5 +1,5 @@
 <div class="container" >
-	<hr>
+	<hr style="margin-top: 5px;margin-bottom: 5px;">
 	<footer class="footer" >
         <div class="row">
         	<div class="col-md-2" >
