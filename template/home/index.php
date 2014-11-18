@@ -53,14 +53,14 @@ foreach ( $actus as $value ) {
 		<h2 class="featurette-heading">
 			<a href="?controler=actu&action=getActu&id=<?php echo $value->id()?>"><?php echo $value->name();?></a>
 		</h2>
-		<p class="lead"><?php echo substr(strip_tags($value->content()),0,500);?> ...</p>
+		<p class="lead" style="text-align: justify;"><?php echo substr(strip_tags($value->content()),0,500);?> ...</p>
 	</div>
     <?php }else{?>
     <div class="col-md-7">
 		<h2 class="featurette-heading">
 			<a href="?controler=actu&action=getActu&id=<?php echo $value->id()?>"><?php echo $value->name();?></a>
 		</h2>
-		<p class="lead"><?php echo substr(strip_tags($value->content()),0,500);?> ...</p>
+		<p class="lead" style="text-align: justify;"><?php echo substr(strip_tags($value->content()),0,500);?> ...</p>
 	</div>
 	<div class="col-md-5">
 		<img class="featurette-image img-responsive"

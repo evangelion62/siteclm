@@ -43,8 +43,11 @@
 						admin zone<span class="caret"></span></a>
 					<ul class="dropdown-menu" role="menu">
 						<li><a href="?controler=media">Médias</a></li>
+						<li><a href="#">Les Blogs</a></li>
+						<li><a href="#">Liens pied-de-page</a></li>
 						<li class="divider"></li>
 						<li><a href="?controler=user&action=listUser">Utilisateurs</a></li>
+						<li><a href="?controler=user&action=listUser">Les Espace Perso</a></li>
 					</ul></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
