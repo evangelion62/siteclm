@@ -6,42 +6,28 @@
 		<li data-target="#carousel-example-generic" data-slide-to="0"
 			class="active"></li>
 		<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-		<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-		<li data-target="#carousel-example-generic" data-slide-to="3"></li>
 	</ol>
 
 	<!-- Wrapper for slides -->
 	<div class="carousel-inner">
 		<div class="item active">
-			<a href="#"><img src="web/img/rouge.gif" alt="...">
-			<div class="carousel-caption">
-				<h3>Rouge</h3>
-				<p>Slide rouge</p>
-			</div>
-			</a>
+			<a href="#"><img style="width: 100%;"
+				src="web/img/uploads/Hydrangeas.jpg" alt="...">
+				<div class="carousel-caption" style="top: 5px;">
+					<h3>Rouge</h3>
+					<p>Slide rouge</p>
+				</div> </a>
 		</div>
 		<div class="item">
-			<img src="web/img/bleu.gif" alt="...">
-			<div class="carousel-caption">
+			<a href="#"><img style="width: 100%;" src="web/img/dsc-4074-922x518-133.jpg"
+				alt="...">
+			<div class="carousel-caption" style="top: 0px;">
 				<h3>Bleu</h3>
 				<p>Slide bleu</p>
-			</div>
-		</div>
-		<div class="item">
-			<img src="web/img/vert.gif" alt="...">
-			<div class="carousel-caption">
-				<h3>Vert</h3>
-				<p>Slide vert</p>
-			</div>
-		</div>
-		<div class="item">
-			<img src="web/img/jaune.gif" alt="...">
-			<div class="carousel-caption">
-				<h3>Vert</h3>
-				<p>Slide vert</p>
-			</div>
+			</div> </a>
 		</div>
 	</div>
+
 	<!-- Controls -->
 	<a class="left carousel-control" href="#carousel-example-generic"
 		role="button" data-slide="prev"> <span
