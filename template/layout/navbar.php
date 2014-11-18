@@ -21,10 +21,11 @@
 						class="glyphicon glyphicon-folder-close"></span> Espace Perso<span
 						class="caret"></span></a>
 					<ul class="dropdown-menu" role="menu">
-						<li><a href="#">Parents</a></li>
-						<li><a href="#">Elèves</a></li>
-						<li><a href="#">Personnels</a></li>
-						<li><a href="#">Visiteurs</a></li>
+						<li><a href="http://84.14.30.198/pronote/parent.html" target="blanck">Parents</a></li>
+						<li><a href="http://84.14.30.198/pronote/eleve.html" target="blanck">Elèves</a></li>
+						<li><a href="http://84.14.30.198/pronote/professeur.html" target="blanck">Professeurs</a></li>
+						<li><a href="http://84.14.30.198/pronote/entreprise.html" target="blanck">Entreprises</a></li>
+						<li><a href="http://84.14.30.198/pronote/academie.html" target="blanck">Académie</a></li>
 					</ul></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown"><span class="glyphicon glyphicon-th-large"></span>
