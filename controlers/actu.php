@@ -1,9 +1,22 @@
 <?php
 switch ($action) {
 	case 'allActu':
-		$actuManager = new ActuManager($bdd);
-		$actus = $actuManager->getList();
-		require_once 'template/actu/totalactu.php';
+		if (!empty($_GET['page'])){
+			$actuManager = new ActuManager($bdd);
+			$actus = $actuManager->getPage($_GET['page']);
+			$nbActu = $actuManager->count();
+			$nbPages = $nbActu/5;
+			$pageActive = $_GET['page'];
+			require_once 'template/actu/totalactu.php';
+		}else {
+			$actuManager = new ActuManager($bdd);
+			$actus = $actuManager->getPage();
+			$nbActu = $actuManager->count();
+			$nbPages = $nbActu/5;
+			$pageActive = 1;
+			require_once 'template/actu/totalactu.php';
+		}
+		
 	break;
 	
 	case 'getActu':

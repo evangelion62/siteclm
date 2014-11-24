@@ -116,6 +116,45 @@ abstract class EntityManager {
 		}
 	}
 	
+	/*renvoi une liste d'entitée par page*/
+	public function getPage ($pageNb=1,$nbParPage=5,$orderBy='id',$nb=9999,$desc=TRUE){
+		if ($desc){
+			$desc = ' DESC';
+		}else{
+			$desc = '';
+		}
+		$cmpt = 0;
+		$entityName = $this->_entityName;
+		$entityProperties = $entityName::$_properties;
+		$entitys = array();
+		$page = array();
+		
+		foreach ($entityProperties as $table => $properties) {
+			$q = $this->_db->query("SELECT * FROM `".$table."` ORDER BY ".$orderBy.$desc);
+			while (($donnees = $q->fetch(PDO::FETCH_ASSOC)) && ($cmpt<$nb) && ($cmpt < ($pageNb * $nbParPage)))
+			{
+				if ($cmpt >= (($pageNb * $nbParPage) - $nbParPage)){
+					$entitys[] = new $entityName($donnees);
+				}
+				$cmpt++;
+			}
+			
+			return $entitys;
+		}
+	}
+	
+	public function count(){
+		$entityName = $this->_entityName;
+		$entityProperties = $entityName::$_properties;
+		foreach ($entityProperties as $table => $properties) {
+			$q = $this->_db->query("SELECT COUNT(*) FROM ".$table);
+			while ($donnees = $q->fetch(PDO::FETCH_ASSOC))
+			{
+				return $nbPage = $donnees['COUNT(*)'];
+			}
+		}
+	}
+	
 	public function update($entity) {
 		
 		if ($this->_entityName == get_class($entity)){
