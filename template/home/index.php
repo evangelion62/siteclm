@@ -1,6 +1,6 @@
 <?php ob_start();?>
 <div id="carousel-example-generic" class="carousel slide"
-	data-ride="carousel">
+	data-ride="carousel" style="box-shadow:0px 0px 10px black;">
 	<!-- Indicators -->
 	<ol class="carousel-indicators">
 		<li data-target="#carousel-example-generic" data-slide-to="0"
@@ -47,7 +47,7 @@ foreach ( $actus as $value ) {
     <?php if ($cmpt%2!=0){?>
     <div class="col-md-5">
 		<img class="featurette-image img-responsive"
-			src="<?php echo $value->img()?>" alt="Generic placeholder image">
+			src="<?php echo $value->img()?>" alt="Generic placeholder image" style="box-shadow:0px 0px 10px black;">
 	</div>
 	<div class="col-md-7">
 		<h2 class="featurette-heading">
@@ -64,7 +64,7 @@ foreach ( $actus as $value ) {
 	</div>
 	<div class="col-md-5">
 		<img class="featurette-image img-responsive"
-			src="<?php echo $value->img()?>" alt="Generic placeholder image">
+			src="<?php echo $value->img()?>" alt="Generic placeholder image" style="box-shadow:0px 0px 10px black;">
 	</div>
     <?php }?>
 </div>
@@ -78,7 +78,7 @@ foreach ( $actus as $value ) {
 </div>
 <br>
 <div class="jumbotron"
-	style="padding: 0px; border-radius: 0px; margin-bottom: 0px;">
+	style="padding: 0px; border-radius: 0px; margin-bottom: 0px;box-shadow:0px 0px 10px black;">
 	<div class="row">
 		<div class="col-md-5">
 			<img class="featurette-image img-responsive"
