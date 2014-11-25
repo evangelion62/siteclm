@@ -47,7 +47,7 @@ foreach ( $actus as $value ) {
     <?php if ($cmpt%2!=0){?>
     <div class="col-md-5">
 		<img class="featurette-image img-responsive"
-			src="<?php echo $value->img()?>" alt="Generic placeholder image" style="box-shadow:0px 0px 10px black;">
+			src="<?php echo $value->img()?>" alt="Generic placeholder image">
 	</div>
 	<div class="col-md-7">
 		<h2 class="featurette-heading">
@@ -64,7 +64,7 @@ foreach ( $actus as $value ) {
 	</div>
 	<div class="col-md-5">
 		<img class="featurette-image img-responsive"
-			src="<?php echo $value->img()?>" alt="Generic placeholder image" style="box-shadow:0px 0px 10px black;">
+			src="<?php echo $value->img()?>" alt="Generic placeholder image">
 	</div>
     <?php }?>
 </div>
