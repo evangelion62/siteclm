@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-    <name>Collège Louise Michel Lille</name>
-    <url>www.collegelouisemichellille.fr</url>
     <adminId>administrateur</adminId>
-    <adminpwd>test</adminpwd>
+    <adminpwd>test2</adminpwd>
     <installStatus>none</installStatus>
 </site>

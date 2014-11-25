@@ -16,7 +16,7 @@ switch ($action) {
 			$bddManager->setdbname($_POST['dbname']);
 			$bddManager->setuser($_POST['user']);
 			$bddManager->setpwd($_POST['pwd']);
-			header('Location: ?controler=install&action=siteNameConfig');
+			header('Location: ?controler=install&action=siteAdminConfig');
 		}
 		else {
 			$templateTitle='Site Install - Base de données';
