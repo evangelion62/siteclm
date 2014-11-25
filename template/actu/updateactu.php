@@ -3,11 +3,13 @@
 <form role="form"
 	action="<?php if (!empty($formAction)){echo $formAction;}?>"
 	method="POST" enctype="multipart/form-data">
+	
 	<div class="form-group">
 		<label for="name">Titre de l'Actualité</label> <input type="text"
 			class="form-control" id="name" name="name"
 			value="<?php echo $actu->name() ?>">
 	</div>
+	
 	<div class="form-group">
 		<a href="#" id='btnimgslct' class="btn btn-default"
 			data-toggle="modal" data-target="#myModal">Image d'illustration de
@@ -15,7 +17,9 @@
 		<p class="help-block">Veuillez selectionner une image, cette image
 			sert à illustrer votre actualité.</p>
 	</div>
+	
 	<input type="hidden" id="imgActu" name="imgActu" value="0">
+	
 	<div class="form-group">
 		<label for="content">Votre Actualité</label>
 		<textarea name="content" id="content"><?php echo $actu->content() ?></textarea>
@@ -24,8 +28,11 @@
         // instance, using default configuration.
        CKEDITOR.replace( 'content' );
 	</script>
+	
 	</div>
+	
 	<input type="hidden" id="id" name="id" value="<?php echo $actu->id()?>">
+	
 	<input type="submit" class="btn btn-default pull-right" value="Valider">
 </form>
 
@@ -59,21 +66,31 @@
 				<?php }?>
 				</div>
 			</div>
-			<div class="modal-footer">
-				<ul class="pagination">
-					<li class="disabled"><a href="#">&laquo;</a></li>
-					<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">5</a></li>
-					<li><a href="#">&raquo;</a></li>
-				</ul>
-			</div>
+			
+			<?php if ($nbPages > 1){?>
+			<ul class="pagination" style = "margin-left: 10px;">
+				<li <?php if ($pageActive == 1){echo 'class="disabled"';}?>><a
+					href="<?php echo '?controler=actu&action=updateActu&id='.$actu->id().'&pageImg='.($pageActive-1); ?>">&laquo;</a></li>
+			<?php
+				for($i = 0; $i < $nbPages; $i ++) {
+					if (($i + 1) == $pageActive) {
+						echo '<li class="active"><a href="?controler=actu&action=updateActu&id=' . $actu->id () . '&pageImg=' . ($i + 1) . '">' . ($i + 1) . '</a></li>';
+					} else {
+						echo '<li><a href="?controler=actu&action=updateActu&id=' . $actu->id () . '&pageImg=' . ($i + 1) . '">' . ($i + 1) . '</a></li>';
+					}
+				}
+				?>
+				<li <?php if ($pageActive >= $nbPages){echo 'class="disabled"';}?>><a
+					href="<?php if ($pageActive >= $nbPages){echo '#';}else{echo  '?controler=actu&action=updateActu&id='.$actu->id().'&pageImg='.($pageActive+1);} ?>">&raquo;</a></li>
+			</ul>
+			<?php }	?>
 		</div>
 	</div>
 </div>
 <?php
+if (!empty($_GET['pageImg'])){
+	$jsScript = 'web/js/myscript.js';	
+}
 $contents = ob_get_clean ();
 $ckeditor = true;
 if (is_file ( 'template/layout/layout.php' )) {
