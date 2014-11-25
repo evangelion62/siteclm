@@ -9,7 +9,7 @@ foreach ( $actus as $value ) {
 <hr style="margin-top: 5px;margin-bottom: 5px;">
 <div class="media">
   <a class="pull-left" href="?controler=actu&action=getActu&id=' . $value->id () . '">
-    <img class="media-object" src="' . $value->img () . '" alt="..." style="width:100px;">
+    <img class="media-object" src="' . $value->img () . '" alt="..." style="width:100px;box-shadow:0px 0px 10px black;">
   </a>
   <div class="media-body">
     <h4 class="media-heading"><a href="?controler=actu&action=getActu&id=' . $value->id () . '">' . $value->name () . '</a></h4>
