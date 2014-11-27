@@ -18,7 +18,7 @@
 			sert à illustrer votre actualité.</p>
 	</div>
 	
-	<input type="hidden" id="imgActu" name="imgActu" value="0">
+	<input type="hidden" id="imgActu" name="imgActu" value="<?php echo $actu->img() ?>" >
 	
 	<div class="form-group">
 		<label for="content">Votre Actualité</label>
