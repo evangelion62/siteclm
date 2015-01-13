@@ -37,6 +37,7 @@
 						<li><a href="#">Blog 1</a></li>
 						<li><a href="#">Blog 2</a></li>
 					</ul></li>
+			<?php if (!empty($_SESSION['token'])){?>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span>
 						admin zone<span class="caret"></span></a>
@@ -48,10 +49,16 @@
 						<li><a href="?controler=user&action=listUser">Utilisateurs</a></li>
 						<li><a href="?controler=user&action=listUser">Les Espace Perso</a></li>
 					</ul></li>
+			<?php }?>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
+			<?php if (empty($_SESSION['token'])){?>
 				<li><a href="?controler=user&action=connectUser"><span
 						class="glyphicon glyphicon-user"></span> Connexion</a></li>
+			<?php }else{?>
+				<li><a href="?controler=user&action=disconnectUser"><span
+						class="glyphicon glyphicon-user"></span> Déconnexion</a></li>
+			<?php }?>
 			</ul>
 		</div>
 	</div>

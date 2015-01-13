@@ -5,6 +5,7 @@
 			<a href="<?php echo $actu->img();?>" target="blank"> <img
 				src="<?php echo $actu->img();?>" alt="" /></a>
 		</div>
+		<?php if (!empty($_SESSION['token'])){?>
 		<div class="btn-group">
 			<a
 				href="?controler=actu&action=updateActu&id=<?php echo $actu->id();?>"
@@ -14,6 +15,7 @@
 				class="btn btn-default">Supprimer <span
 				class="glyphicon glyphicon-trash"></span></a>
 		</div>
+		<?php }?>
 	</div>
 	<div class="col-sm-9 col-md-9">
 		<h1 style="color: #5bc0de;"><?php echo $actu->name() ?></h1>
