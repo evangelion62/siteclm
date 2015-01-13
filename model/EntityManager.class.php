@@ -87,8 +87,12 @@ abstract class EntityManager {
 				$q = $this->_db->query("SELECT * FROM `".$table."` WHERE `".$selectKeyName."` = ".$value);
 			}
 			
-			$donnees = $q->fetch(PDO::FETCH_ASSOC);
-			return new $entityName($donnees);
+			if ($donnees = $q->fetch(PDO::FETCH_ASSOC)){
+				return new $entityName($donnees);
+			}else{
+				return false;
+			}
+			
 		}
 	}
 	
