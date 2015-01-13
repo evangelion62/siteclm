@@ -66,6 +66,8 @@ switch ($action) {
 		//création des tables de l'application
 		$userManager = new UserManager($bdd);
 		$userManager->createTable();
+		$userAuthManager = new UserAuthManager($bdd);
+		$userAuthManager->createTable();
 		$userInfoManager = new UserInfoManager($bdd);
 		$userInfoManager->createTable();
 		$imgManager = new ImgManager($bdd);
