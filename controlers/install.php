@@ -25,34 +25,20 @@ switch ($action) {
 		}
 	break;
 	
-	/* étape 2 - 
-	 * paramétrage du nom du site et de l'adresse DNS*/
-	case 'siteNameConfig':
-		$siteManager = new SiteManager('config/site.config.xml');
-		
-		if (	!empty($_POST['sitename'])
-			&&	!empty($_POST['urlsite']))
-		{
-			$siteManager->setName($_POST['sitename']);
-			$siteManager->setUrl($_POST['urlsite']);
-			header('Location: ?controler=install&action=siteAdminConfig');
-		} else {
-			$templateTitle='Site Install - Identité';
-			$formAction='?controler=install&action=siteNameConfig';
-			require_once 'template/install/siteconfig.php';
-		}
-	break;
-	
-	/* étape 3
+	/* étape 2
 	 * paramétrage de l'administrateur*/
 	case 'siteAdminConfig':
-		$siteManager = new SiteManager('config/site.config.xml');
 		
 		if (	!empty($_POST['adminId'])
 			&&	!empty($_POST['adminMdp'])) 
 		{
-			$siteManager->setAdminId($_POST['adminId']);
-			$siteManager->setAdminpwd($_POST['adminMdp']);
+			$userManager = new UserManager($bdd);
+			$donnees= array('name'=>$_POST['adminId'],'pass'=>$_POST['adminMdp']);
+			$admin = new User($donnees);
+			
+			$userManager->add($admin);
+			$admin = $userManager->get($_POST['adminId'],'name');
+			$donnes= array('userid'=>$admin->id(),'adminlvl'=>'admin');
 			
 			header('Location: ?controler=install&action=final');
 		}else {
@@ -68,6 +54,8 @@ switch ($action) {
 		$userManager->createTable();
 		$userAuthManager = new UserAuthManager($bdd);
 		$userAuthManager->createTable();
+		$userRightsManager = new UserRightsManager($bdd);
+		$userRightsManager->createTable();
 		$userInfoManager = new UserInfoManager($bdd);
 		$userInfoManager->createTable();
 		$imgManager = new ImgManager($bdd);
