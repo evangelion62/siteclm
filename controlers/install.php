@@ -38,7 +38,10 @@ switch ($action) {
 			
 			$userManager->add($admin);
 			$admin = $userManager->get($_POST['adminId'],'name');
-			$donnes= array('userid'=>$admin->id(),'adminlvl'=>'admin');
+			$donnees= array('userid'=>$admin->id(),'adminlvl'=>'3');
+			$userRights = new UserRights($donnees);
+			$userRightsManager = new UserRightsManager($bdd);
+			$userRightsManager->add($userRights);
 			
 			header('Location: ?controler=install&action=final');
 		}else {

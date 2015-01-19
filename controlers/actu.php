@@ -1,4 +1,22 @@
 <?php
+/*definition des niveau d'acces de chaque action*/
+$adminlvl=array('allActu'=>3,
+				'getActu'=>0,
+				'addActu'=>1,
+				'updateActu'=>2,
+				'deletActu'=>3
+);
+
+/*si utilisateur co alor comparaison*/
+if (!empty($_SESSION['token']) && !empty($_SESSION['userid'])){
+	$userRightsManager = new UserRightsManager($bdd);
+	$userRights = $userRightsManager->get($_SESSION['userid'],'userid');
+	
+	if ($userRights->adminlvl() < $adminlvl[$action]){
+		echo 'denied';
+	}
+}
+
 switch ($action) {
 	case 'allActu' :
 		if (! empty ( $_GET ['page'] )) {
@@ -84,6 +102,6 @@ switch ($action) {
 		break;
 	
 	default :
-		;
+		header ( 'Location: ?controler=actu&action=allActu' );
 		break;
 }
