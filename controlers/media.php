@@ -1,4 +1,24 @@
 <?php
+/*definition des niveau d'acces de chaque action*/
+$adminlvl=array('allImg'=>1,
+		'addImg'=>2,
+		'deleteImg'=>2,
+);
+
+/*si utilisateur co alor comparaison*/
+if (!empty($_SESSION['token']) && !empty($_SESSION['userid'])){
+	$userRightsManager = new UserRightsManager($bdd);
+	$userRights = $userRightsManager->get($_SESSION['userid'],'userid');
+
+	if ($userRights->adminlvl() < $adminlvl[$action]){
+		require_once 'template/user/accesdenied.php';
+		exit();
+	}
+}else if ($adminlvl[$action] >0){
+	require_once 'template/user/accesdenied.php';
+	exit();
+}
+
 switch ($action) {
 	case 'allImg':
 		$imgManager = new ImgManager($bdd);

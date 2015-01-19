@@ -1,4 +1,28 @@
 <?php
+/*definition des niveau d'acces de chaque action*/
+$adminlvl=array('bddFirstConfig'=>3,
+		'siteAdminConfig'=>3,
+		'final'=>3,
+);
+
+$siteManager = new SiteManager('config/site.config.xml');
+
+/*si utilisateur co alor comparaison*/
+if (!empty($_SESSION['token']) && !empty($_SESSION['userid'])){
+	$userRightsManager = new UserRightsManager($bdd);
+	$userRights = $userRightsManager->get($_SESSION['userid'],'userid');
+
+	if ($userRights->adminlvl() < $adminlvl[$action]){
+		require_once 'template/user/accesdenied.php';
+		exit();
+	}
+}else if ($siteManager->installStatus()=='none'){
+	//premier acces
+}
+else if ($adminlvl[$action] >0){
+	require_once 'template/user/accesdenied.php';
+	exit();
+}
 
 switch ($action) {
 	/* étape 1 -
@@ -29,9 +53,13 @@ switch ($action) {
 	 * paramétrage de l'administrateur*/
 	case 'siteAdminConfig':
 		
+		$siteManager = new SiteManager('config/site.config.xml');
+		
 		if (	!empty($_POST['adminId'])
 			&&	!empty($_POST['adminMdp'])) 
 		{
+			$siteManager->setAdminId($_POST['adminId']);
+			$siteManager->setAdminpwd($_POST['adminMdp']);
 			$userManager = new UserManager($bdd);
 			$donnees= array('name'=>$_POST['adminId'],'pass'=>$_POST['adminMdp']);
 			$admin = new User($donnees);
@@ -65,6 +93,9 @@ switch ($action) {
 		$imgManager->createTable();
 		$actuManager = new ActuManager($bdd);
 		$actuManager->createTable();
+		
+		$siteManager = new SiteManager('config/site.config.xml');
+		$siteManager->setInstallStatus('Succes');
 		
 		header('Location: ?controler=index');
 	break;

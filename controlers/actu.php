@@ -1,6 +1,6 @@
 <?php
 /*definition des niveau d'acces de chaque action*/
-$adminlvl=array('allActu'=>3,
+$adminlvl=array('allActu'=>0,
 				'getActu'=>0,
 				'addActu'=>1,
 				'updateActu'=>2,
@@ -13,8 +13,12 @@ if (!empty($_SESSION['token']) && !empty($_SESSION['userid'])){
 	$userRights = $userRightsManager->get($_SESSION['userid'],'userid');
 	
 	if ($userRights->adminlvl() < $adminlvl[$action]){
-		echo 'denied';
+		require_once 'template/user/accesdenied.php';
+		exit();
 	}
+}else if ($adminlvl[$action] >0){
+	require_once 'template/user/accesdenied.php';
+	exit();
 }
 
 switch ($action) {
