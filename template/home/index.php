@@ -5,27 +5,27 @@
 	<ol class="carousel-indicators">
 		<li data-target="#carousel-example-generic" data-slide-to="0"
 			class="active"></li>
-		<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+<!-- 		<li data-target="#carousel-example-generic" data-slide-to="1"></li> -->
 	</ol>
 
 	<!-- Wrapper for slides -->
 	<div class="carousel-inner">
 		<div class="item active">
 			<a href="#"><img style="width: 100%;"
-				src="http://www.gettyimages.co.uk/CMS/StaticContent/1391099215267_hero2.jpg" alt="...">
+				src="web/img/dsc-4074-922x518-133.jpg" alt="Collège louise michel">
 				<div class="carousel-caption" style="top: 5px;">
-					<h3>Rouge</h3>
-					<p>Slide rouge</p>
+					<h3>Collège Louise Michel Lille</h3>
+					<p>14 Rue de Cannes, 59000 Lille</p>
 				</div> </a>
 		</div>
-		<div class="item">
-			<a href="#"><img style="width: 100%;" 
-			src="http://news.bbcimg.co.uk/media/images/71832000/jpg/_71832498_71825880.jpg" alt="...">
-			<div class="carousel-caption" style="top: 0px;">
-				<h3>Bleu</h3>
-				<p>Slide bleu</p>
-			</div> </a>
-		</div>
+<!-- 		<div class="item"> -->
+<!--			<a href="#"><img style="width: 100%;" -->
+<!--			src="http://news.bbcimg.co.uk/media/images/71832000/jpg/_71832498_71825880.jpg" alt="..."> -->
+<!--			<div class="carousel-caption" style="top: 0px;"> -->
+<!-- 				<h3>Bleu</h3> -->
+<!-- 				<p>Slide bleu</p> -->
+<!-- 			</div> </a> -->
+<!-- 		</div> -->
 	</div>
 
 	<!-- Controls -->
