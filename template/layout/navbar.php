@@ -49,7 +49,7 @@
 						<li><a href="#">Liens pied-de-page</a></li>
 						<li class="divider"></li>
 						<li><a href="?controler=user&action=listUser">Utilisateurs</a></li>
-						<li><a href="?controler=user&action=listUser">Les Espace Perso</a></li>
+						<li><a href="#">Les Espace Perso</a></li>
 					</ul></li>
 			<?php }?>
 			</ul>
