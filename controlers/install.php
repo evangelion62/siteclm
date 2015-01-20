@@ -40,7 +40,7 @@ switch ($action) {
 			$bddManager->setdbname($_POST['dbname']);
 			$bddManager->setuser($_POST['user']);
 			$bddManager->setpwd($_POST['pwd']);
-			header('Location: ?controler=install&action=siteAdminConfig');
+			header('Location: ?controler=install&action=final');
 		}
 		else {
 			$templateTitle='Site Install - Base de données';
@@ -71,7 +71,11 @@ switch ($action) {
 			$userRightsManager = new UserRightsManager($bdd);
 			$userRightsManager->add($userRights);
 			
-			header('Location: ?controler=install&action=final');
+			$siteManager = new SiteManager('config/site.config.xml');
+			$siteManager->setInstallStatus('Succes');
+			
+			header('Location: ?controler=index');
+			
 		}else {
 			$templateTitle='Site Install - Administrateur';
 			$formAction='?controler=install&action=siteAdminConfig';
@@ -94,10 +98,7 @@ switch ($action) {
 		$actuManager = new ActuManager($bdd);
 		$actuManager->createTable();
 		
-		$siteManager = new SiteManager('config/site.config.xml');
-		$siteManager->setInstallStatus('Succes');
-		
-		header('Location: ?controler=index');
+		header('Location: ?controler=install&action=siteAdminConfig');
 	break;
 	
 	default:
