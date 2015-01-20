@@ -2,7 +2,7 @@
 /*definition des niveau d'acces de chaque action*/
 $adminlvl=array('allActu'=>0,
 				'getActu'=>0,
-				'addActu'=>1,
+				'addActu'=>2,
 				'updateActu'=>2,
 				'deletActu'=>3
 );
