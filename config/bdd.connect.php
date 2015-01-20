@@ -9,8 +9,8 @@ try
 }
 catch (Exception $e)
 {
-	$_GET['controler']='error';
-	$_GET['action']='bddBadConfig';
+	$_GET['controler']='install';
+	$_GET['action']='bddFirstConfig';
 	$userErrors['bdderror']='Mauvaise configuration de la base de données. Veuillez vérifier vos informations!';
 }
 

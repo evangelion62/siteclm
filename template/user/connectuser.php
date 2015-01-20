@@ -21,7 +21,7 @@ ob_start();?>
 	    <div class="col-md-4">
 	      <div class="input-group">
           <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
-          <input class="form-control" type="text" name="mdpId" id="mdpId" placeholder="Votre mot de passe...">
+          <input class="form-control" type="password" name="userMdp" id="userMdp" placeholder="Votre mot de passe...">
         </div>
 	    </div>
 	  </div>

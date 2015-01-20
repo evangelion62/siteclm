@@ -1,4 +1,28 @@
 <?php
+/*definition des niveau d'acces de chaque action*/
+$adminlvl=array('bddFirstConfig'=>3,
+		'siteAdminConfig'=>3,
+		'final'=>3,
+);
+
+$siteManager = new SiteManager('config/site.config.xml');
+
+/*si utilisateur co alor comparaison*/
+if (!empty($_SESSION['token']) && !empty($_SESSION['userid'])){
+	$userRightsManager = new UserRightsManager($bdd);
+	$userRights = $userRightsManager->get($_SESSION['userid'],'userid');
+
+	if ($userRights->adminlvl() < $adminlvl[$action]){
+		require_once 'template/user/accesdenied.php';
+		exit();
+	}
+}else if ($siteManager->installStatus()=='none'){
+	//premier acces
+}
+else if ($adminlvl[$action] >0){
+	require_once 'template/user/accesdenied.php';
+	exit();
+}
 
 switch ($action) {
 	/* étape 1 -
@@ -16,7 +40,7 @@ switch ($action) {
 			$bddManager->setdbname($_POST['dbname']);
 			$bddManager->setuser($_POST['user']);
 			$bddManager->setpwd($_POST['pwd']);
-			header('Location: ?controler=install&action=siteNameConfig');
+			header('Location: ?controler=install&action=final');
 		}
 		else {
 			$templateTitle='Site Install - Base de données';
@@ -25,27 +49,10 @@ switch ($action) {
 		}
 	break;
 	
-	/* étape 2 - 
-	 * paramétrage du nom du site et de l'adresse DNS*/
-	case 'siteNameConfig':
-		$siteManager = new SiteManager('config/site.config.xml');
-		
-		if (	!empty($_POST['sitename'])
-			&&	!empty($_POST['urlsite']))
-		{
-			$siteManager->setName($_POST['sitename']);
-			$siteManager->setUrl($_POST['urlsite']);
-			header('Location: ?controler=install&action=siteAdminConfig');
-		} else {
-			$templateTitle='Site Install - Identité';
-			$formAction='?controler=install&action=siteNameConfig';
-			require_once 'template/install/siteconfig.php';
-		}
-	break;
-	
-	/* étape 3
+	/* étape 2
 	 * paramétrage de l'administrateur*/
 	case 'siteAdminConfig':
+		
 		$siteManager = new SiteManager('config/site.config.xml');
 		
 		if (	!empty($_POST['adminId'])
@@ -53,8 +60,22 @@ switch ($action) {
 		{
 			$siteManager->setAdminId($_POST['adminId']);
 			$siteManager->setAdminpwd($_POST['adminMdp']);
+			$userManager = new UserManager($bdd);
+			$donnees= array('name'=>$_POST['adminId'],'pass'=>$_POST['adminMdp']);
+			$admin = new User($donnees);
 			
-			header('Location: ?controler=install&action=final');
+			$userManager->add($admin);
+			$admin = $userManager->get($_POST['adminId'],'name');
+			$donnees= array('userid'=>$admin->id(),'adminlvl'=>'3');
+			$userRights = new UserRights($donnees);
+			$userRightsManager = new UserRightsManager($bdd);
+			$userRightsManager->add($userRights);
+			
+			$siteManager = new SiteManager('config/site.config.xml');
+			$siteManager->setInstallStatus('Succes');
+			
+			header('Location: ?controler=index');
+			
 		}else {
 			$templateTitle='Site Install - Administrateur';
 			$formAction='?controler=install&action=siteAdminConfig';
@@ -66,6 +87,10 @@ switch ($action) {
 		//création des tables de l'application
 		$userManager = new UserManager($bdd);
 		$userManager->createTable();
+		$userAuthManager = new UserAuthManager($bdd);
+		$userAuthManager->createTable();
+		$userRightsManager = new UserRightsManager($bdd);
+		$userRightsManager->createTable();
 		$userInfoManager = new UserInfoManager($bdd);
 		$userInfoManager->createTable();
 		$imgManager = new ImgManager($bdd);
@@ -73,7 +98,7 @@ switch ($action) {
 		$actuManager = new ActuManager($bdd);
 		$actuManager->createTable();
 		
-		header('Location: ?controler=index');
+		header('Location: ?controler=install&action=siteAdminConfig');
 	break;
 	
 	default:

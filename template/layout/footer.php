@@ -1,5 +1,5 @@
 <div class="container" >
-	<hr>
+	<hr style="margin-top: 5px;margin-bottom: 5px;">
 	<footer class="footer" >
         <div class="row">
         	<div class="col-md-2" >
@@ -7,7 +7,8 @@
         		<ol class="list-unstyled">
 					<li>Violence</li>
 					<li><a href="http://www.ac-lille.fr/dsden59/" title="site académie de lille" target="_blank">Inspection académique</a></li>
-					<li><a href="http://www1.ac-lille.fr/" title="rectorat de lille" target="_blank">Rectorat</a></li>				
+					<li><a href="http://www1.ac-lille.fr/" title="rectorat de lille" target="_blank">Rectorat</a></li>
+					<li><a href="http://www.index-education.com/fr/" title="index education" target="_blank">Pronote</a></li>
 				</ol>
 			</div>
         	<div class="col-md-2">
@@ -30,7 +31,7 @@
 			<div class="col-md-2">
         		<h4>Informations légales</h4>
         		<ol class="list-unstyled">
-        			<li>Droit à l'image</li>
+        			<li><a href="http://fr.wikipedia.org/wiki/Droit_%C3%A0_l%27image_des_personnes_en_France" title="Droit à l'image" target="_blank">Droit à l'image</a></li>
         		</ol>
 			</div>
 			<div class="col-md-2">

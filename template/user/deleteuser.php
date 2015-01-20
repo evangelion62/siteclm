@@ -7,8 +7,8 @@ ob_start();?>
 	<span class="label label-warning">Attention</span><p> Cette action est irréversible. Etes-vous sûr de vouloir supprimer cet élément ?</p>
 </div>
 <ul class="nav nav-pills">
-  <li class="active"><a href="#">OUI</a></li>
-  <li><a href="#">NON</a></li>
+  <li><a href="?controler=user&action=deleteUser&id=<?php echo $_GET['id']?>&confirm=1">OUI</a></li>
+  <li><a href="?controler=user&action=listUser">NON</a></li>
 </ul>
 <?php
 $contents = ob_get_clean();

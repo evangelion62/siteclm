@@ -29,11 +29,19 @@
 		<!-- navbar======================================================== -->
 		<?php if (is_file('template/layout/navbar.php')){require_once 'template/layout/navbar.php';}?>
 		
+		<!-- warper======================================================== -->
 		<div class='container'>
-		<?php if (!empty($userErrors))
+		<?php 
+			if (!empty($userErrors))
 			{
 				foreach ($userErrors as $value) {
 					echo '<span class="label label-danger">Erreur</span> '.$value.'';
+				}
+			}
+			if (!empty($userSuccess))
+			{
+				foreach ($userSuccess as $value) {
+					echo '<span class="label label-success">Succès</span> '.$value.'';
 				}
 			}
 	
@@ -49,5 +57,10 @@
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	    <!-- Include all compiled plugins (below), or include individual files as needed -->
 	    <script src="web/js/bootstrap.min.js"></script>
+	    <!-- script de la vue -->
+	    <?php if (!empty($jsScript)) {
+	    	echo '<script src="'.$jsScript.'"></script>';
+	    }?>
+	    
 	</body>
 </html>

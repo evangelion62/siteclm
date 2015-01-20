@@ -2,19 +2,20 @@
 <h1>Ajout d'Actualité</h1>
 <form role="form"
 	action="<?php if (!empty($formAction)){echo $formAction;}?>"
-	method="POST"
-	enctype="multipart/form-data"
-	>
+	method="POST" enctype="multipart/form-data">
 	<div class="form-group">
 		<label for="name">Titre de l'actualité</label> <input type="text"
-			class="form-control" id="name" name="name" placeholder="Titre de l'Actualité...">
+			class="form-control" id="name" name="name"
+			placeholder="Titre de l'Actualité...">
 	</div>
 	<div class="form-group">
-		<label for="img">Image d'illustration de l'Actualité</label> <input
-			type="file" id="img">
-		<p class="help-block">Veullez selectionner une image à envoyer au
-			serveur, cette image sert à illustré votre actualité.</p>
+		<a href="#" id='btnimgslct' class="btn btn-default"
+			data-toggle="modal" data-target="#myModal">Image d'illustration de
+			l'Actualité</a>
+		<p class="help-block">Veuillez selectionner une image, cette image
+			sert à illustrer votre actualité.</p>
 	</div>
+	<input type="hidden" id="imgActu" name="imgActu" value="0">
 	<div class="form-group">
 		<label for="content">Votre Actualité</label>
 		<textarea name="content" id="content" name="content"></textarea>
@@ -26,6 +27,39 @@
 	</div>
 	<input type="submit" class="btn btn-default pull-right" value="Valider">
 </form>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+	aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">nom de l'image</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+				<?php foreach ($imgs as $img) {?>
+					<div class="col-xs-6 col-sm-4 col-md-4">
+						<a
+							onclick="var input = document.getElementById('imgActu');
+									input.setAttribute('value', '<?php echo $img->link();?>');
+									document.getElementById('myModalLabel').innerHTML = '<?php echo $img->name();?>'
+									document.getElementById('btnimgslct').innerHTML = '<?php echo $img->name();?>'"
+							href="#">
+							<div class="thumbnail">
+								<img src="<?php echo $img->link();?>"
+									alt="<?php echo $img->name();?>">
+							</div>
+						</a>
+					</div>
+				<?php }?>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 <?php
 $contents = ob_get_clean ();
 $ckeditor = true;

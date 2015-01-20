@@ -17,10 +17,16 @@ class Actu extends Entity{
 							Entity::NULL_OR_NOT=>Entity::DEFAULT_NULL,
 							Entity::COMMENT=>'contenu d actu',
 					),
-						
+					'img'=>array(
+							Entity::TYPE=>Entity::VARCHAR,
+							Entity::LEN=>Entity::VARCHAR_MAX_LEN,
+							Entity::NULL_OR_NOT=>Entity::DEFAULT_NULL,
+							Entity::COMMENT=>'image d illustration de l actu',
+					),
 			),
 	);
 	//attributs
 	protected $_name;
 	protected $_content;
+	protected $_img;
 }
