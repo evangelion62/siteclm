@@ -29,15 +29,15 @@
 					data-toggle="dropdown"><span class="glyphicon glyphicon-th-large"></span>
 						Vie du Collège<span class="caret"></span></a>
 					<ul class="dropdown-menu" role="menu">
-						<li><a href="?controler=actu&action=allActu">Actualité</a></li>
+						<li><a href="?controler=actu&action=allActu"><span class="glyphicon glyphicon-tags"></span> Actualité</a></li>
 			<?php if (!empty($_SESSION['token'])){?>
 						<li><a href="?controler=album&action=allAlbum">Collège en images</a></li>
 						<li><a href="#">Les Projets</a></li>
+			<?php }?>
 						<li class="divider"></li>
 						<li class="dropdown-header">Les blogs du collège</li>
-						<li><a href="#">Blog 1</a></li>
-						<li><a href="#">Blog 2</a></li>
-			<?php }?>
+						<li><a href="https://fablablouisemichel.wordpress.com/" target="blanck"><span class="glyphicon glyphicon-paperclip"></span> Le Fablab</a></li>
+						<li><a href="http://bloggy-jazz.over-blog.com/" target="blanck"><span class="glyphicon glyphicon-paperclip"></span> Jazz Festival </a></li>
 					</ul></li>
 			<?php if (!empty($_SESSION['token'])){?>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
