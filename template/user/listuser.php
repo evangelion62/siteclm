@@ -7,8 +7,7 @@ ob_start();?>
 <table class="table table-hover">
   	<tr>
   		<th>ID</th>
-  		<th>Nom</th>
-  		<th>Prénom</th>
+  		<th>Niveau d'administration</th>
   		<th>Identifiant</th>
   		<th>Mot de passe</th>
   		<th>Actions <div class="btn-group">
@@ -19,8 +18,17 @@ ob_start();?>
   	?>
   	<tr>
   		<td><?php echo $user->id();?></td>
-  		<td></td>
-  		<td></td>
+  		<td>
+  		<?php foreach ($userRights as $userRight){
+  			if ($userRight->userid() == $user->id()){
+  				echo $userRight->adminlvl();
+  			}
+  		}?>
+  		<div class="btn-group">
+		  <a href="?controler=user&action=promotUser&id=<?php echo $user->id();?>" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></a>
+		  <a href="?controler=user&action=unpromotUser&id=<?php echo $user->id();?>" class="btn btn-default"><span class="glyphicon glyphicon-minus"></span></a>
+		</div>
+  		</td>
   		<td><?php echo $user->name();?></td>
   		<td><?php echo $user->pass();?></td>
   		<td><div class="btn-group">

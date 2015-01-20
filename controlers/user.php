@@ -4,6 +4,10 @@ $adminlvl=array('addUser'=>3,
 		'listUser'=>3,
 		'connectUser'=>0,
 		'disconnectUser'=>0,
+		'updateUser'=>3,
+		'deleteUser'=>3,
+		'promotUser'=>3,
+		'unpromotUser'=>3,
 );
 
 /*si utilisateur co alor comparaison*/
@@ -44,6 +48,9 @@ switch ($action){
 	case 'listUser':
 		$userManager = new UserManager($bdd);
 		$users = $userManager->getList();
+		$userRightsManager= new UserRightsManager($bdd);
+		$userRights = $userRightsManager->getList();
+		
 		require_once 'template/user/listuser.php';
 	break;
 	
@@ -52,8 +59,19 @@ switch ($action){
 	break;
 	
 	case 'deleteUser':
-		
-		require_once 'template/user/deleteuser.php';
+		if (	!empty($_GET['id'])
+			&&	!empty($_GET['confirm'])){
+				if($_GET['confirm']==1 && $_GET['id']!=$_SESSION['userid']){
+					$userManager = new UserManager($bdd);
+					$userManager->delete($_GET['id']);
+					
+					header('Location: ?controler=user&action=listUser');
+				}else{
+					header('Location: ?controler=user&action=listUser');
+				}
+			}else if (!empty($_GET['id'])){
+				require_once 'template/user/deleteuser.php';
+			}
 	break;
 		
 	case 'connectUser':
@@ -105,6 +123,34 @@ switch ($action){
 		header ( 'Location: ?controler=index' );
 	break;
 	
+	case 'promotUser':
+		if (!empty($_GET['id']) && !empty($_SESSION['userid'])){
+			$userRightsManager = new UserRightsManager($bdd);
+			$userRights = $userRightsManager->get($_GET['id']);
+			if ($userRights->adminlvl()<3){
+				$userRights->setAdminlvl($userRights->adminlvl()+1);
+				$userRightsManager->update($userRights);
+				header('Location: ?controler=user&action=listUser');
+			}
+			header('Location: ?controler=user&action=listUser');
+		}
+		header('Location: ?controler=user&action=listUser');
+	break;
+	
+	case 'unpromotUser':
+		if (!empty($_GET['id']) && !empty($_SESSION['userid'])){
+			$userRightsManager = new UserRightsManager($bdd);
+			$userRights = $userRightsManager->get($_GET['id']);
+			if ($userRights->adminlvl()>=1 && $_GET['id']!=$_SESSION['userid']){
+				$userRights->setAdminlvl($userRights->adminlvl()-1);
+				$userRightsManager->update($userRights);
+				header('Location: ?controler=user&action=listUser');
+			}
+			header('Location: ?controler=user&action=listUser');
+		}
+		header('Location: ?controler=user&action=listUser');
+	break;
+			
 	default:
 		
 	break;
